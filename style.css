@@ -260,7 +260,7 @@ nav li:hover {
   position: absolute;
   left: 5rem;
   border: 3px solid rgb(252, 113, 63);
-  height: 10rem;
+  height: 8rem;
   margin-bottom: 2rem;
   padding: 1rem;
 }
@@ -271,7 +271,7 @@ nav li:hover {
   position: absolute;
   right: 5rem;
   border: 3px solid rgb(252, 113, 63);
-  height: 10rem;
+  height: 8rem;
   padding: 1rem;
   margin-bottom: 2rem;
 }
