@@ -24,7 +24,7 @@ h1 {
 h2 {
   font-size: 3rem;
   padding: 14rem;
-  margin-top: 9rem;
+  margin-top: 7rem;
 }
 
 /* Clear */
@@ -111,7 +111,7 @@ a {
 nav {
   background: rgb(252, 113, 63);
   color: white;
-  padding: 3rem;
+  padding: 2rem;
   position: fixed;
   top: 0rem;
   width: 100%;
