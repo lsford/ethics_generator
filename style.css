@@ -23,8 +23,8 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  padding: 5rem;
-  margin-top: 9rem;
+  padding: 14rem;
+  margin-top: 7rem;
 }
 
 /* Clear */
@@ -36,15 +36,15 @@ h2 {
 button {
   margin: 5rem;
   padding: 1rem 2rem;
-  background: grey;
+  background: rgb(252, 113, 63);
   color: white;
-  border: 0.2rem solid black;
+  border: 0.2rem solid rgb(252, 113, 63);
   border-radius: 1rem;
   font-size: 1.5rem;
 }
 
 button:hover {
-  background: lightgrey;
+  background: lightcoral;
   padding: 1.5rem 3rem;
   cursor: pointer;
 }
@@ -58,7 +58,7 @@ button:hover {
 /* Form */
 .form {
   font-size: 1.5rem;
-  border: 0.3rem solid black;
+  border: 0.3rem solid rgb(252, 113, 63);
   margin: 1rem;
   text-align: center;
 }
@@ -91,13 +91,14 @@ form button {
 
 /* Image */
 .image {
-  background-image: url("/pexels-thisisengineering-3913025.jpg");
-  height: 50rem;
+  background-image: url("/pexels-guillaume-meurice-3363556.jpg");
+  height: 35rem;
   background-size: cover;
-  background-position: center;
+  background-position-x: 50%;
+  background-position-y: 67%;
   text-align: center;
-  color: white;
-  text-shadow: 3px 3px 3px black;
+  color: whitesmoke;
+  text-shadow: 6px 6px 6px black;
 }
 
 /* Navigation Bar */
@@ -108,9 +109,9 @@ a {
 }
 
 nav {
-  background: lightslategray;
+  background: rgb(252, 113, 63);
   color: white;
-  padding: 3rem;
+  padding: 2rem;
   position: fixed;
   top: 0rem;
   width: 100%;
