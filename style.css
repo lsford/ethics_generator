@@ -27,6 +27,16 @@ h2 {
   margin-top: 7rem;
 }
 
+h3 {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+/* Paragraph */
+p {
+  font-size: 1.8rem;
+  padding: 1rem;
+}
 /* Clear */
 .clear {
   clear: both;
@@ -69,7 +79,7 @@ form textarea,
 form option {
   display: block;
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 form input,
@@ -84,9 +94,15 @@ form button {
   width: 50%;
 }
 /* Footer */
-.footer {
-  font-size: 1.2rem;
-  margin: 2rem;
+#footer {
+  font-size: 1.4rem;
+  margin-left: 3rem;
+}
+
+.index-form {
+  width: 50%;
+  text-align: center;
+  margin: auto;
 }
 
 /* Image */
