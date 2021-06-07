@@ -53,6 +53,7 @@ p {
   padding: 1rem;
   text-align: justify;
   margin-bottom: auto;
+  justify-content: center;
 }
 
 /* Clear */
@@ -137,6 +138,11 @@ form button {
   width: 50%;
   text-align: center;
   margin: auto;
+}
+
+#footer-about {
+  margin-top: 30rem;
+  font-size: 1.4rem;
 }
 
 /* Image */
