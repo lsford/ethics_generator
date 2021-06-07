@@ -18,7 +18,7 @@ body {
 }
 
 #about-body {
-  height: 70rem;
+  height: 100rem;
 }
 
 /* Title */
@@ -81,6 +81,22 @@ button:hover {
 .content {
   padding: 2rem;
   font-size: 1.8rem;
+}
+
+#description {
+  text-align: justify;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+#developers {
+  margin-bottom: 2rem;
+  color: rgb(252, 113, 63);
+}
+
+#hr {
+  border-top: 0.2rem solid rgb(252, 113, 63);
+  margin: 0rem 12rem;
 }
 
 /* Form */
@@ -187,7 +203,7 @@ nav li {
 }
 
 nav li:hover {
-  background: lightsteelblue;
+  background: rgba(230, 230, 230, 0.397);
 }
 
 /* Float Columns */
