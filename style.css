@@ -36,6 +36,12 @@ h3 {
 p {
   font-size: 1.8rem;
   padding: 1rem;
+  text-align: justify;
+  margin-bottom: auto;
+}
+p1 {
+position: absolute; right: 10rem; width: auto;
+
 }
 /* Clear */
 .clear {
@@ -152,6 +158,9 @@ nav li:hover {
 }
 /* Float Columns */
 .column {
-  width:300px;
+  width:500px;
   float: left;
+}
+.justify{
+  text-align:justify
 }
