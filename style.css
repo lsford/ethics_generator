@@ -46,12 +46,6 @@ p {
   text-align: justify;
   margin-bottom: auto;
 }
-p1 {
-  position: absolute;
-  right: 10rem;
-  width: auto;
-  border: 3px solid orangered;
-}
 
 /* Clear */
 .clear {
@@ -158,6 +152,7 @@ nav {
   position: fixed;
   top: 0rem;
   width: 100%;
+  z-index: 1;
 }
 
 .navigation-contact {
