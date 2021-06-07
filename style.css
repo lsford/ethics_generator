@@ -150,3 +150,8 @@ nav li {
 nav li:hover {
   background: lightsteelblue;
 }
+/* Float Columns */
+.column {
+  width:300px;
+  float: left;
+}
