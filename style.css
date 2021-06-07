@@ -245,6 +245,8 @@ nav li:hover {
   left: 5rem;
   border: 3px solid rgb(252, 113, 63);
   height: 10rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 .column-about-luke {
@@ -255,4 +257,5 @@ nav li:hover {
   border: 3px solid rgb(252, 113, 63);
   height: 10rem;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
