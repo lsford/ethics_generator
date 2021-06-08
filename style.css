@@ -25,6 +25,9 @@ body {
 h1 {
   font-size: 2.8rem;
 }
+h2:hover {
+  letter-spacing: .5rem;
+}
 
 h2 {
   font-size: 3rem;
@@ -52,7 +55,7 @@ p {
   font-size: 1.8rem;
   padding: 1rem;
   text-align: justify;
-  margin-bottom: auto;
+    margin-bottom: auto;
   justify-content: center;
 }
 
@@ -65,15 +68,15 @@ p {
 button {
   margin: 5rem;
   padding: 1rem 2rem;
-  background: rgb(252, 113, 63);
+  background: #0dacb4;
   color: white;
-  border: 0.2rem solid rgb(252, 113, 63);
+  border: 0.2rem solid #0dacb4;
   border-radius: 1rem;
   font-size: 1.5rem;
 }
 
 button:hover {
-  background: lightcoral;
+  background: #0dacb4;
   padding: 1.5rem 3rem;
   cursor: pointer;
 }
@@ -92,18 +95,18 @@ button:hover {
 
 #developers {
   margin-bottom: 2rem;
-  color: rgb(252, 113, 63);
+  color: #0dacb4;
 }
 
 #hr {
-  border-top: 0.2rem solid rgb(252, 113, 63);
+  border-top: 0.2rem solid #0dacb4;
   margin: 0rem 12rem;
 }
 
 /* Form */
 .form {
   font-size: 1.5rem;
-  border: 0.3rem solid rgb(252, 113, 63);
+  border: 0.3rem solid #0dacb4;
   margin: 10rem;
   text-align: center;
 }
@@ -139,6 +142,12 @@ form button {
   text-align: center;
   margin: auto;
 }
+.car-form {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  color: #0dacb4;
+}
 
 #footer-about {
   margin-top: 30rem;
@@ -167,7 +176,16 @@ form button {
   color: whitesmoke;
   text-shadow: 6px 6px 6px black;
 }
-
+.image-car {
+  background-image: url("/AutonomousCar.jpg");
+  height: 35rem;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 67%;
+  text-align: center;
+  color: #f8ad69;
+  text-shadow: 6px 6px 6px black;
+}
 /* Navigation Bar */
 a {
   color: white;
@@ -176,7 +194,7 @@ a {
 }
 
 nav {
-  background: rgb(252, 113, 63);
+  background: #0dacb4;
   color: white;
   padding: 2rem;
   position: fixed;
@@ -186,7 +204,7 @@ nav {
 }
 
 .navigation-contact {
-  background: rgb(252, 113, 63);
+  background: #0dacb4;
   color: white;
   padding: 2rem;
   position: fixed;
@@ -219,7 +237,7 @@ nav li:hover {
   float: left;
   position: absolute;
   left: 5rem;
-  border: 3px solid rgb(252, 113, 63);
+  border: 3px solid #0dacb4;
   margin: 1rem;
   color: white;
 }
@@ -229,7 +247,7 @@ nav li:hover {
   float: right;
   position: absolute;
   right: 5rem;
-  border: 3px solid rgb(252, 113, 63);
+  border: 3px solid #0dacb4;
   margin: 1rem;
   color: white;
 }
@@ -249,7 +267,7 @@ nav li:hover {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: rgb(252, 113, 63);
+  background-color: #0dacb4;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -265,7 +283,7 @@ nav li:hover {
   float: left;
   position: absolute;
   left: 5rem;
-  border: 3px solid rgb(252, 113, 63);
+  border: 3px solid #0dacb4;
   height: 8rem;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -276,7 +294,7 @@ nav li:hover {
   float: right;
   position: absolute;
   right: 5rem;
-  border: 3px solid rgb(252, 113, 63);
+  border: 3px solid #0dacb4;
   height: 8rem;
   padding: 1rem;
   margin-bottom: 2rem;
