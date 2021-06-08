@@ -103,6 +103,12 @@ button:hover {
   margin: 0rem 6rem;
 }
 
+#linkedin {
+  color: black;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Form */
 .form {
   font-size: 1.5rem;
@@ -284,7 +290,7 @@ nav li:hover {
   position: absolute;
   left: 5rem;
   border: 3px solid #0dacb4;
-  height: 8rem;
+  height: 10rem;
   margin-bottom: 2rem;
   padding: 1rem;
   margin-left: 5rem;
@@ -296,7 +302,7 @@ nav li:hover {
   position: absolute;
   right: 5rem;
   border: 3px solid #0dacb4;
-  height: 8rem;
+  height: 10rem;
   padding: 1rem;
   margin-bottom: 2rem;
   margin-right: 5rem;
