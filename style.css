@@ -26,7 +26,7 @@ h1 {
   font-size: 2.8rem;
 }
 h2:hover {
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 h2 {
@@ -55,7 +55,7 @@ p {
   font-size: 1.8rem;
   padding: 1rem;
   text-align: justify;
-    margin-bottom: auto;
+  margin-bottom: auto;
   justify-content: center;
 }
 
@@ -99,8 +99,8 @@ button:hover {
 }
 
 #hr {
-  border-top: 0.2rem solid #0dacb4;
-  margin: 0rem 12rem;
+  border-top: 0.3rem solid #0dacb4;
+  margin: 0rem 6rem;
 }
 
 /* Form */
@@ -231,7 +231,7 @@ nav li:hover {
 }
 
 /* Float Columns */
-.column {
+.column-about-owen {
   width: 50rem;
   height: 23rem;
   float: left;
@@ -241,7 +241,7 @@ nav li:hover {
   margin: 1rem;
   color: white;
 }
-.columnright {
+.column-about-luke {
   width: 50rem;
   height: 23rem;
   float: right;
@@ -278,8 +278,8 @@ nav li:hover {
   height: 100%;
 }
 
-.column-about-owen {
-  width: 50rem;
+.column-contact-owen {
+  width: 35rem;
   float: left;
   position: absolute;
   left: 5rem;
@@ -287,10 +287,11 @@ nav li:hover {
   height: 8rem;
   margin-bottom: 2rem;
   padding: 1rem;
+  margin-left: 5rem;
 }
 
-.column-about-luke {
-  width: 50rem;
+.column-contact-luke {
+  width: 35rem;
   float: right;
   position: absolute;
   right: 5rem;
@@ -298,4 +299,5 @@ nav li:hover {
   height: 8rem;
   padding: 1rem;
   margin-bottom: 2rem;
+  margin-right: 5rem;
 }
