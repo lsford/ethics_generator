@@ -13,7 +13,7 @@
   <body>
     <header>
       <nav class="navigation-contact">
-        <h1 id="title">Ethics Generator Project</h1>
+        <a href="/index.html"><h1 id="title">Ethics Generator Project</h1></a>
         <ul>
           <li><a href="/index.html">Home</a></li>
           <li><a href="/about.html">About</a></li>
@@ -37,7 +37,7 @@
             Email: otb3@kent.ac.uk <br />
             <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181)">
               <a
-                id="linkedin"
+                id="linkedin-link"
                 href="https://www.linkedin.com/in/owen-buckley-172570213?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBtqH7g%2BFSi%2Bp%2BKiVY33PBQ%3D%3D"
                 target="_blank"
                 >LinkedIn profile</a
@@ -47,7 +47,7 @@
         </div>
 
         <div class="column-contact-luke">
-          <p id="linkedin">
+          <p id="linkedin-link">
             To contact Luke Somerville Ford <br />
             Email: ls748@kent.ac.uk <br />
             <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181)">
@@ -75,13 +75,19 @@
             required
           />
           <label for="email">Email:</label>
-          <input type="email" name="email" id="email" required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Please enter email"
+          />
           <label for="gender">Please select your gender:</label>
           <select name="gender" id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            <option value="pnts">Prefer Not to Say</option>
+            <option value="male" id="gender">Male</option>
+            <option value="female" id="gender">Female</option>
+            <option value="other" id="gender">Other</option>
+            <option value="pnts" id="gender">Prefer Not to Say</option>
           </select>
           <label for="message">Please enter any feedback or questions:</label>
           <textarea
@@ -90,6 +96,7 @@
             id="message"
             cols="30"
             rows="4"
+            placeholder="Please enter some feedback"
           ></textarea>
           <button type="submit">Submit</button>
         </form>
