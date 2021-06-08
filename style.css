@@ -292,7 +292,7 @@ nav li:hover {
   border: 3px solid #0dacb4;
   height: 10rem;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 0rem;
   margin-left: 5rem;
 }
 
@@ -303,7 +303,7 @@ nav li:hover {
   right: 5rem;
   border: 3px solid #0dacb4;
   height: 10rem;
-  padding: 1rem;
+  padding: 0rem;
   margin-bottom: 2rem;
   margin-right: 5rem;
 }
