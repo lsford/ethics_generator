@@ -338,9 +338,10 @@ nav li:hover {
 
 #index-title {
   width: 40%;
-  margin-top: 10rem;
+  margin-top: 13rem;
   margin-left: 7rem;
   padding: 0rem;
+  border: 0rem;
 }
 
 #index-heading {
@@ -349,16 +350,18 @@ nav li:hover {
   margin-left: 7rem;
   color: #f2eae7;
   width: 30rem;
+  border: 0rem;
 }
 
 #index-tagline {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-top: 1rem;
   margin-left: 9rem;
   padding: 0rem;
   color: #d1a42f;
   width: 30rem;
-  font-style: italic;
+  font-family: "Indie Flower", cursive;
+  border: 0rem;
 }
 
 #image-index {
@@ -377,8 +380,17 @@ nav li:hover {
 }
 
 #index-content {
-  margin: 7rem;
-  width: 50%;
+  width: 50rem;
+  margin-top: 5rem;
+  margin-left: 7rem;
   color: #f2eae7;
   justify-content: center;
+  padding: 0rem;
+  border: 0rem;
+}
+
+#index-button {
+  text-align: center;
+  margin-left: 15rem;
+  margin-top: 5rem;
 }
