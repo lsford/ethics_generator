@@ -25,9 +25,10 @@ body {
 h1 {
   font-size: 2.8rem;
 }
-h2:hover {
+/*h2:hover
+ {
   letter-spacing: 0.5rem;
-}
+} */
 
 h2 {
   font-size: 3rem;
@@ -79,8 +80,8 @@ button {
 }
 
 button:hover {
-  background: #0f56b3;
-  padding: 1.5rem 3rem;
+  background: #083674;
+  /*padding: 1.5rem 3rem*/
   cursor: pointer;
 }
 
@@ -327,4 +328,57 @@ nav li:hover {
   padding: 0rem;
   margin-bottom: 2rem;
   margin-right: 5rem;
+}
+
+/*Index take 2*/
+#index2 {
+  background: #036f96;
+  min-height: 80vh;
+}
+
+#index-title {
+  width: 40%;
+  margin-top: 10rem;
+  margin-left: 7rem;
+  padding: 0rem;
+}
+
+#index-heading {
+  font-size: 10rem;
+  margin-top: 7rem;
+  margin-left: 7rem;
+  color: #f2eae7;
+  width: 30rem;
+}
+
+#index-tagline {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 9rem;
+  padding: 0rem;
+  color: #d1a42f;
+  width: 30rem;
+  font-style: italic;
+}
+
+#image-index {
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+}
+
+.navigation-index {
+  background: #fe5900;
+  color: white;
+  padding: 2rem;
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+}
+
+#index-content {
+  margin: 7rem;
+  width: 50%;
+  color: #f2eae7;
+  justify-content: center;
 }
