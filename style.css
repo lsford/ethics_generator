@@ -354,13 +354,13 @@ nav li:hover {
 }
 
 #index-tagline {
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   margin-top: 1rem;
   margin-left: 9rem;
   padding: 0rem;
   color: #d1a42f;
   width: 30rem;
-  font-family: "Indie Flower", cursive;
+  font-family: "Kalam", cursive;
   border: 0rem;
 }
 
@@ -391,6 +391,9 @@ nav li:hover {
 
 #index-button {
   text-align: center;
-  margin-left: 15rem;
-  margin-top: 5rem;
+  /*margin-left: 15rem;
+  margin-top: 5rem;*/
+  margin: auto;
+  display: block;
+  margin-top: 3rem;
 }
