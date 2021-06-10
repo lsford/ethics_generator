@@ -1,0 +1,237 @@
+/* All */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML */
+html {
+  font-size: 62.5%;
+  text-align: justify;
+}
+
+/*Index2 Background*/
+#body2 {
+  background: #036f96;
+  min-height: 80vh;
+}
+
+#about-body2 {
+  background: #036f96;
+  min-height: 100rem;
+}
+
+/* Navigation Bar */
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+
+nav {
+  background: #0f56b3;
+  color: white;
+  padding: 2rem;
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+  z-index: 1;
+  font-size: 3.25rem;
+}
+
+.navigation-contact {
+  background: #0f56b3;
+  color: white;
+  padding: 2rem;
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+}
+
+nav h1 {
+  float: left;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  float: left;
+  margin: 0rem 3rem;
+  list-style: none;
+}
+
+.navigation-index {
+  background: #fe5900;
+  color: #f2eae7;
+  padding: 2rem;
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+}
+
+.navigation-index li:hover {
+  border-bottom: 3px solid #015353;
+}
+
+/*Index2 titles*/
+#index-title {
+  width: 40%;
+  margin-top: 13rem;
+  margin-left: 7rem;
+  padding: 0rem;
+  border: 0rem;
+}
+
+#index-heading {
+  font-size: 10rem;
+  margin-top: 7rem;
+  margin-left: 7rem;
+  color: #f2eae7;
+  width: 30rem;
+  border: 0rem;
+}
+
+#index-tagline {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 9rem;
+  padding: 0rem;
+  color: #d1a42f;
+  width: 35rem;
+  font-family: "Kalam", cursive;
+  border: 0rem;
+}
+
+/*Index2 side image*/
+#image-index {
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+}
+
+/*Index2 paragraph*/
+#index-content {
+  width: 50rem;
+  margin-top: 4rem;
+  margin-left: 7rem;
+  color: #f2eae7;
+  justify-content: center;
+  padding: 0rem;
+  border: 0rem;
+  font-size: 2rem;
+}
+
+/*Index2 button*/
+#index-button {
+  text-align: center;
+  margin-left: 20rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #0f56b3;
+  width: 30%;
+  font-size: 1.7rem;
+  color: #f2eae7;
+  border-radius: 10px;
+  border: 1px solid #0f56b3;
+}
+
+#index-button:hover {
+  cursor: pointer;
+  background-color: #0d4691;
+}
+
+#purpose {
+  font-size: 3rem;
+  color: #f2eae7;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.purpose-p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #f2eae7;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+#developers {
+  font-size: 3rem;
+  color: #f2eae7;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#line {
+  border-top: 0.3rem solid #fe5900;
+  margin: 4rem 6rem;
+}
+
+/*About columns*/
+.column-about-owen {
+  width: 50rem;
+  height: 50rem;
+  float: left;
+  position: absolute;
+  left: 5rem;
+  border: 3px solid #fe5900;
+  margin: 1rem;
+  color: #f2eae7;
+}
+.column-about-luke {
+  width: 50rem;
+  height: 50rem;
+  float: right;
+  position: absolute;
+  right: 5rem;
+  border: 3px solid #fe5900;
+  margin: 1rem;
+  color: #f2eae7;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 50rem;
+}
+.alignright {
+  position: absolute;
+  right: 5rem;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fe5900;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.about-content {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f2eae7;
+}
+
+.about-info {
+  font-size: 2rem;
+  color: #f2eae7;
+}
+
+.about-contact-info {
+  font-size: 2rem;
+  color: #f2eae7;
+  margin-top: 10 rem;
+}

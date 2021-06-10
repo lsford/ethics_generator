@@ -254,9 +254,9 @@ nav li {
   list-style: none;
 }
 
-nav li:hover {
+/*nav li:hover {
   background: rgba(230, 230, 230, 0.397);
-}
+}*/
 
 /* Float Columns */
 .column-about-owen {
@@ -354,12 +354,12 @@ nav li:hover {
 }
 
 #index-tagline {
-  font-size: 2.7rem;
+  font-size: 3rem;
   margin-top: 1rem;
   margin-left: 9rem;
   padding: 0rem;
   color: #d1a42f;
-  width: 30rem;
+  width: 35rem;
   font-family: "Kalam", cursive;
   border: 0rem;
 }
@@ -372,7 +372,7 @@ nav li:hover {
 
 .navigation-index {
   background: #fe5900;
-  color: white;
+  color: #f2eae7;
   padding: 2rem;
   position: fixed;
   top: 0rem;
@@ -396,4 +396,9 @@ nav li:hover {
   margin: auto;
   display: block;
   margin-top: 3rem;
+  color: #f2eae7;
+}
+
+.navigation-index li:hover {
+  border-bottom: 3px solid #015353;
 }
