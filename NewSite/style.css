@@ -114,29 +114,35 @@ nav li {
 }
 
 /*Index2 paragraph*/
-#index-content {
-  width: 50rem;
+#index-info{
   margin-top: 4rem;
   margin-left: 7rem;
+  padding: 0rem;
+  border: 0rem;
+  width: 65rem;
+}
+
+#index-content {
   color: #f2eae7;
   justify-content: center;
   padding: 0rem;
   border: 0rem;
   font-size: 2rem;
+  margin-bottom: 4rem;
+  margin-left: 7rem;
 }
 
 /*Index2 button*/
 #index-button {
-  text-align: center;
-  margin-left: 20rem;
-  margin-top: 3rem;
+  width: 20rem;
   padding: 2rem;
   background-color: #0f56b3;
-  width: 30%;
   font-size: 1.7rem;
   color: #f2eae7;
   border-radius: 10px;
   border: 1px solid #0f56b3;
+  text-align: center;
+  margin-left: 40%;
 }
 
 #index-button:hover {
