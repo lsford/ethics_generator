@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  min-height: 100%;
+}
 
 /* HTML */
 html {
@@ -143,6 +146,7 @@ nav li {
   border: 1px solid #0f56b3;
   text-align: center;
   margin-left: 40%;
+  
 }
 
 #index-button:hover {
@@ -185,6 +189,26 @@ nav li {
   float: left;
   position: absolute;
   left: 5rem;
+  border: 3px solid #fe5900;
+  margin: 1rem;
+  color: #f2eae7;
+}
+.column-about-cars {
+  width: 70rem;
+  height: 39rem;
+  float: left;
+  position: absolute;
+  left: 5rem;
+  border: 3px solid #fe5900;
+  margin: 0;
+  color: #f2eae7;
+}
+.column-about-cdss {
+  width: 70em;
+  height: 39rem;
+  float: right;
+  position: absolute;
+  right: 5rem;
   border: 3px solid #fe5900;
   margin: 1rem;
   color: #f2eae7;

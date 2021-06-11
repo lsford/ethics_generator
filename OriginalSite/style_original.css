@@ -269,6 +269,16 @@ nav li {
   margin: 1rem;
   color: white;
 }
+.column-about-cars {
+  width: 50rem;
+  height: 23rem;
+  float: left;
+  position: absolute;
+  left: 5rem;
+  border: 3px solid #0f56b3;
+  margin: 1rem;
+  color: white;
+}
 .column-about-luke {
   width: 50rem;
   height: 23rem;
