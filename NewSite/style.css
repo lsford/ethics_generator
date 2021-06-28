@@ -213,6 +213,11 @@ nav li {
   margin: 0;
   color: #f2eae7;
 }
+.quotations {
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+}
 .column-about-cdss {
   width: 70em;
   height: 39rem;
@@ -337,3 +342,4 @@ nav li {
   margin: 2rem 3rem;
   justify-content: center;
 }
+
