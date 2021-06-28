@@ -337,3 +337,13 @@ nav li {
   margin: 2rem 3rem;
   justify-content: center;
 }
+
+/* CDSS Container */
+#cdss-container {
+  width: 70em;
+  height: 39rem;
+  border: 3px solid #fe5900;
+  color: #f2eae7;
+  position: absolute;
+  left: 25%;
+}
