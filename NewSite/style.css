@@ -198,7 +198,7 @@ nav li {
   height: 39rem;
   float: left;
   position: absolute;
-  left: 5rem;
+  left: 2rem;
   border: 3px solid #fe5900;
   margin: 0;
   color: #f2eae7;
@@ -208,9 +208,9 @@ nav li {
   height: 39rem;
   float: right;
   position: absolute;
-  right: 5rem;
+  right: 2rem;
   border: 3px solid #fe5900;
-  margin: 1rem;
+  margin: 0rem;
   color: #f2eae7;
 }
 .column-about-luke {
