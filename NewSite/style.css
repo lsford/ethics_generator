@@ -5,6 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#footer {
+  font-size: 1.8rem;
+  color: #f2eae7;
+}
+
 html,
 body {
   min-height: 100%;
