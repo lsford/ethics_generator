@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-#footer {
-  font-size: 1.8rem;
-  color: #f2eae7;
-}
-
 html,
 body {
   min-height: 100%;
@@ -166,7 +161,7 @@ nav li {
 }
 
 #quote {
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding: 0rem;
   font-size: 2.5rem;
   color: #f2eae7;
