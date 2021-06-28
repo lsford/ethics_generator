@@ -5,7 +5,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -117,7 +118,7 @@ nav li {
 }
 
 /*Index2 paragraph*/
-#index-info{
+#index-info {
   margin-top: 4rem;
   margin-left: 7rem;
   padding: 0rem;
@@ -146,7 +147,6 @@ nav li {
   border: 1px solid #0f56b3;
   text-align: center;
   margin-left: 40%;
-  
 }
 
 #index-button:hover {
@@ -198,7 +198,7 @@ nav li {
   height: 39rem;
   float: left;
   position: absolute;
-  left: 2rem;
+  left: 1rem;
   border: 3px solid #fe5900;
   margin: 0;
   color: #f2eae7;
@@ -208,7 +208,7 @@ nav li {
   height: 39rem;
   float: right;
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   border: 3px solid #fe5900;
   margin: 0rem;
   color: #f2eae7;
