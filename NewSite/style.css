@@ -223,6 +223,40 @@ nav li {
   margin: 0rem;
   color: #f2eae7;
 }
+
+#cdss-button {
+  width: 20rem;
+  padding: 2rem;
+  background-color: #0f56b3;
+  font-size: 1.7rem;
+  color: #f2eae7;
+  border-radius: 10px;
+  border: 1px solid #0f56b3;
+  text-align: center;
+  margin-left: 25rem;
+}
+
+#cdss-button:hover {
+  cursor: pointer;
+  background-color: #0d4691;
+}
+
+#av-button {
+  width: 20rem;
+  padding: 2rem;
+  background-color: #0f56b3;
+  font-size: 1.7rem;
+  color: #f2eae7;
+  border-radius: 10px;
+  border: 1px solid #0f56b3;
+  margin-left: 25rem;
+}
+
+#av-button:hover {
+  cursor: pointer;
+  background-color: #0d4691;
+}
+
 .column-about-luke {
   width: 50rem;
   height: 50rem;
@@ -289,4 +323,17 @@ nav li {
   font-size: 2rem;
   color: #f2eae7;
   margin-left: 1rem;
+}
+
+/* CDSS Page*/
+#cdss-body {
+  background: #036f96;
+}
+
+/*CDSS Text*/
+#description {
+  font-size: 2rem;
+  color: #f2eae7;
+  margin: 2rem 3rem;
+  justify-content: center;
 }
