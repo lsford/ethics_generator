@@ -194,6 +194,21 @@ nav li {
   margin-top: 3rem;
 }
 
+#title-scenarios {
+  font-size: 3rem;
+  color: #f2eae7;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#title-cdss {
+  font-size: 3rem;
+  color: #f2eae7;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
 #line {
   border-top: 0.3rem solid #fe5900;
   margin: 4rem 1rem;
@@ -345,6 +360,7 @@ nav li {
 /* CDSS Page*/
 #cdss-body {
   background: #036f96;
+  min-height: 65rem;
 }
 
 /*CDSS Text*/
@@ -366,4 +382,23 @@ nav li {
   background-image: url(aihealth.jpg);
   background-repeat: no-repeat;
   background-size: 70rem 40rem;
+}
+
+#start-button {
+  width: 20rem;
+  padding: 2rem;
+  background-color: #0f56b3;
+  font-size: 1.7rem;
+  color: #f2eae7;
+  border-radius: 10px;
+  border: 1px solid #0f56b3;
+  text-align: center;
+  position: relative;
+  left: 25rem;
+  top: 40rem;
+}
+
+#start-button:hover {
+  cursor: pointer;
+  background-color: #0d4691;
 }
