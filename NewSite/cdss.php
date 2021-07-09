@@ -23,7 +23,6 @@
               <div class="clear"></div>
             </nav>
           </header>
-<body>
-	
-</body>
+</head>
+	</body>
 </html>
