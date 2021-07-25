@@ -30,7 +30,7 @@ html {
 
 #scenario-body {
   background: #036f96;
-  min-height: 70rem;
+  min-height: 90rem;
 }
 
 /* Navigation Bar */
@@ -373,15 +373,21 @@ nav li {
 
 /* CDSS Container */
 #cdss-container {
-  width: 70em;
-  height: 39rem;
+  width: 70rem;
+  height: max-content;
   border: 3px solid #fe5900;
   color: #f2eae7;
-  position: absolute;
-  left: 25%;
-  background-image: url(aihealth.jpg);
-  background-repeat: no-repeat;
-  background-size: 70rem 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.survey-paragraph{
+  font-size: 2rem;
+  color: #f2eae7;
+  margin: 2rem 2rem;
+  justify-content: center;
 }
 
 #start-button {
@@ -393,12 +399,84 @@ nav li {
   border-radius: 10px;
   border: 1px solid #0f56b3;
   text-align: center;
-  position: relative;
-  left: 25rem;
-  top: 40rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 #start-button:hover {
   cursor: pointer;
   background-color: #0d4691;
+}
+
+/*Radio button*/
+input[type='radio']{
+  margin-left: 2rem;
+  margin-right: 1rem;
+  float: left;
+}
+
+/*Radio button content*/
+label{
+  color: #f2eae7;
+  font-size: 2rem;
+  justify-content: center;
+  margin-left: 3rem;
+  display: block;
+}
+
+label:hover{
+  color: #d1a42f;
+  cursor: pointer;
+}
+
+input[type='radio']:hover{
+  color: #d1a42f;
+  cursor: pointer;
+}
+
+input[type='radio']:after {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  top: -0.2rem;
+  left: -0.1rem;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 0.2rem solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  top: -0.2rem;
+  left: -0.1rem;
+  position: relative;
+  background-color: #015353;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 0.2rem solid white;
+}
+
+.scenario-option{
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+}
+
+option{
+  background-color: #d1d3d1;
+  color: black;
+  font-size: 1.5rem;
+}
+
+select{
+  margin-left: 3rem;
+  font-size: 1.5rem;
 }
