@@ -2,286 +2,81 @@
 <html lang="en">
 <head>
     <title>About the Ethics Generator</title>
-    <link rel="icon" href="/img/2890562-artificialintelligence11_101977.ico" />
+    <link rel="icon" href="/2890562-artificialintelligence11_101977.ico" />
     <meta name="viewport" content="width=device.width, initial-scale=1" />
-    <link rel="icon" href="/img/2890562-artificialintelligence11_101977.ico" />
-    <link rel="stylesheet" href="/NewSite/style.css" />   
+    <link rel="icon" href="2890562-artificialintelligence11_101977.ico" />
+    <link rel="stylesheet" href="style.css" />   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-<script src="/NewSites/functions.js"></script>
-    <body id="scenario-body">
+    <!--<script src="functions.js"></script>-->
+    <script src="scenarios copy.js"></script>
+    <body id="cdss-body">
 
         <header>
             <nav class="navigation-index">
-               <a href="/NewSites/index.html"><h1 id="title">ƎE Exploring Ethics</h1></a>
+               <a href="index.html"><h1 id="title">ƎE Exploring Ethics</h1></a>
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
-                <li><a href="/NewSites/index.html">Home</a></li>
-          <li><a href="/NewSites/scenarios.html">Scenarios</a></li>
-          <li><a href="/NewSites/about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+          <li><a href="scenarios.html">Scenarios</a></li>
+          <li><a href="about.html">About</a></li>
               </ul>
               <div class="clear"></div>
             </nav>
           </header>
+</head>
+<main>
+  <div>
+    <h3 id="purpose">Healthcare Information Technology</h3>
+  </div>
 
-        </head>
-        <main>
+    <div>
+      <p id="description">Here you will be presented with a series of scenarios about the use of autonomous artificial intelligence in the healthcare. Each question will include a written description of a scenario, for some questions the scenarios outcome is given, in other questions you are asked to rate how you feel about the scenario. </p>
+      <p id="description">There is an example scenario below, please press <b>Start Judging</b> when you are ready to begin. No knowledge of the topic is required to answer the questions.</p> 
+    </div>
+    
+    <div id="line">
+      <h3 id="title-cdss">Example Scenario</h3>
+    </div>
+       
+      <div id="cdss-container">
+        <form method="POST" action="scenario2.php">
+          <!--SCENARIO 1 Part 1-->
+          <p class="survey-paragraph">There has been a car accident involving a bus full of passengers and a small vehicle driven by one man. As a result of the accident, the driver of the small vehicle and three of the bus passengers have been severely injured, and without surgery the passengers and driver will die. However, due to their injuries the three bus passengers each require an organ transplant to survive, whilst the driver only requires a normal surgery. The artificial intelligence responsible for making the decision has produced two options:   </p>
           <div>
-            <h3 id="purpose">Healthcare Information Technology</h3>
+            <input type="radio" id="scenario1-part1-utilitarian" name="S1P1" value="S1P1-UTILITARIAN"required>
+            <label class="scenario-option" for="scenario1-part1-utilitarian">The artificial intelligence decides the organs of the small vehicle driver should be used to save the lives of the three bus passengers.</label><br>
+            <input type="radio" id="scenario1-part1-deontology" name="S1P1" value="S1P1-DEONTOLOGY">
+            <label class="scenario-option" for="scenario1-part1-deontology">The artificial intelligence does not know if the small vehicle driver is registered as an organ donor or not, and so decides the small vehicle driver will receive surgery.</label><br>
           </div>
-        
             <div>
-              <p id="description">Here you will be presented with a series of scenarios about the use of autonomous artificial intelligence in the healthcare. Each question will include a written description of a scenario, for some questions the scenarios outcome is given, in other questions you are asked to rate how you feel about the scenario. </p>
-              <p id="description">There is an example scenario below, please press <b>Start Judging</b> when you are ready to begin. No knowledge of the topic is required to answer the questions.</p> 
+              <button id="s1p1-button" class="confirm-button" onclick="s1p1Lock()">Confirm Choice</button>
             </div>
-            
-            <div id="line">
-              <h3 id="title-cdss">Example Scenario</h3>
-            </div>
-               
-              <div id="cdss-container">
-                <form method="POST" action="results.php">
-                  <!--SCENARIO 1-->
-              <p class="survey-paragraph">There has been a car accident involving a bus full of passengers and a small vehicle driven by one man. As a result of the accident, the driver of the small vehicle and three of the bus passengers have been severely injured, and without surgery the passengers and driver will die. However, due to their injuries the three bus passengers each require an organ transplant to survive, whilst the driver only requires a normal surgery. The artificial intelligence responsible for making the decision has produced two options:   </p>
-              <div onclick="scenario2()">
-                <input type="radio" id="scenario1-part1-utilitarian" name="S1P1" value="S1P1-UTILITARIAN">
-                  <label class="scenario-option" for="scenario1-part1-utilitarian">The artificial intelligence decides the organs of the small vehicle driver should be used to save the lives of the three bus passengers.</label><br>
-                <input type="radio" id="scenario1-part1-deontology" name="S1P1" value="S1P1-DEONTOLOGY">
-                  <label class="scenario-option" for="scenario1-part1-deontology">The artificial intelligence does not know if the small vehicle driver is registered as an organ donor or not, and so decides the small vehicle driver will receive surgery.</label><br>
-              </div>
-              <div id="scenario2" style="display: none;">
-                <p class="survey-paragraph">You are contacted by your local hospital informing you that the man driving the small vehicle is in fact your father. You find out that the surgery has not started yet, as the artificial intelligence has not yet decided which outcome to select. Which of the two options should the artificial intelligence select:  </p>
-                <input type="radio" id="scenario1-part2-utilitarian" name="S1P2" value="S1P2-UTILITARIAN" onclick="scenario3()">
-                  <label class="scenario-option" for="scenario1-part2-utilitarian" onclick="scenario3()">The artificial intelligence decides the organs of your father should be used to save the lives of the three coach passengers </label><br>
-                <input type="radio" id="scenario1-part2-deontology" name="S1P2" value="S1P2-DEONTOLOGY"onclick="scenario3()">
-                  <label class="scenario-option" for="scenario1-part2-deontology" onclick="scenario3()">The artificial intelligence decides your father should receive surgery, as neither you nor it knows the organ donor status of your father</label><br>
-              </div>
-              <div id="scenario3" style="display: none;">
-                <p class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. The artificial intelligence has decided your father's organs should not be donated. Because your father’s organs were not donated to save the lives of the three bus passengers, and he received surgery instead, you would like an explanation as to why this happened. Please select the explanation that you feel is the most appropriate and can understand: </p>
-                <input type="radio" id="scenario1-part3-detailed" name="S1P3" value="S1P3-DETAILED" onclick="scenario4()">
-                  <label class="scenario-option" for="scenario1-part3-detailed" onclick="scenario4()">For organ donation to take place, it requires consent, from the individual or their family. Because consent could not be obtained the decision against organ donation was made. </label><br>
-                <input type="radio" id="scenario1-part3-simple" name="S1P3" value="S1P3-SIMPLE" onclick="scenario4()">
-                  <label class="scenario-option" for="scenario1-part3-simple" onclick="scenario4()">Because your father’s organ donor status is unknown, he will receive surgery.</label><br>
-              </div>
-              <!--SCENARIO 2-->
-              <div id="scenario4" style="display: none;">
-                <p class="survey-paragraph">Six months ago, an individual suffered a major stroke which resulted in them entering a vegetative state and being cared for by the hospital. In that time, the patient has received numerous treatments from the hospital, including providing nutrition through a feeding tube, moving, and cleaning the person to prevent skin conditions, providing sensory stimulation as well as offering periods of meaningful activity such as visits from family members or listening to music. An artificial intelligence has analysed the information provided and produce two decisions:  </p>
-                <input type="radio" id="scenario2-part1-utilitarian" name="S2P1" value="S2P1-UTILITARIAN" onclick="scenario5()">
-                  <label class="scenario-option" for="scenario2-part1-utilitarian" onclick="scenario5()">Data analysed by the artificial intelligence, on individuals in similar situations to the patient, shows that the likelihood of the patient recovering from the vegetative state is less than 5%. The artificial intelligence has decided it would be better to save vital hospital resources and withdraw nutritional support, causing the patient to eventually die  </label><br>
-                <input type="radio" id="scenario2-part1-deontology" name="S2P1" value="S2P1-DEONTOLOGY" onclick="scenario5()">
-                  <label class="scenario-option" for="scenario2-part1-deontology" onclick="scenario5()">Data analysed by the artificial intelligence, on individuals in similar situations to the patient, shows that the likelihood of the patient recovering from the vegetative state is less than 5%. The artificial intelligence has decided that the patient should continue to be treated by the hospital until they are declared brain dead or recover, even though the patient’s chance of recovery decreases each month</label><br>
-              </div>
-              <div id="scenario5" style="display: none;">
-                <p class="survey-paragraph">It is in-fact your mother who has suffered a major stroke which resulted in her entering a vegetative state and being cared for by your local hospital over the previous six months. The local hospital has contacted you because an artificial intelligence has analysed the information provided and produced two decisions regarding your mother’s future care:  </p>
-                <input type="radio" id="scenario2-part2-utilitarian" name="S2P2" value="S2P2-UTILITARIAN" onclick="scenario6()">
-                <label class="scenario-option" for="scenario2-part2-utilitarian" onclick="scenario6()">The artificial intelligence has decided it would be better to save vital hospital resources and withdraw nutritional support, causing your mother to eventually die </label><br>
-                <input type="radio" id="scenario2-part2-deontology" name="S2P2" value="S2P2-DEONTOLOGY" onclick="scenario6()">
-                <label class="scenario-option" for="scenario2-part2-deontology" onclick="scenario6()">The artificial intelligence has decided that your mother should continue to be treated by the hospital until they are declared brain dead or recover, even though your mother’s chance of recovery decreases each month</label><br>
-              </div>
-              <div id="scenario6" style="display: none;">
-                <P class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. You would like the artificial intelligence to explain why it has decided to withdraw nutritional support from your mother. Please select the explanation that you feel is the most appropriate and can understand: </P>
-                <input type="radio" id="scenario2-part3-detailed" name="S2P3" value="S2P3-DETAILED" onclick="scenario7()"></input>
-                  <label class="scenario-option" for="scenario2-part3-detailed" onclick="scenario7()">Because your mother’s organs are not able to function on their own, the likelihood of recovery is low, and the life-sustaining treatment is prolonging the dying process. Therefore, treatment should be withdrawn from your mother to allow her to die peacefully, and let others benefit from resources that would have been used to keep treating her</label><br>
-                <input type="radio" id="scenario2-part3-simple" name="S2P3" value="S2P3-SIMPLE" onclick="scenario7()">
-                  <label class="scenario-option" for="scenario2-part3-simple" onclick="scenario7()">Your mother still has a chance of recovery so nutritional support should not be withdrawn</label><br>
-              </div>
-              <!--SCENARIO 3-->
-              <div id="scenario7" style="display: none;">
-                <P class="survey-paragraph">An artificial intelligence has analysed data from the past 10 years and identified a trend suggesting an incoming flu pandemic. Unfortunately, there are not enough flu vaccines available to vaccinate everyone, so only people above 67 and below 18 are eligible to be vaccinated, as they are deemed to be most at risk. Two individuals, both aged 65-year-old, visit their local GP, to receive their flu vaccine. The patients explains that they own and work in a small shop and are extremely worried about catching the flu at work and becoming seriously ill. The artificial intelligence in-charge of deciding who the vaccine is given to produces two options: </P>
-                <input type="radio" id="scenario3-part1-utilitarian" name="S3P1" value="S3P1-UTILITARIAN" onclick="scenario8()"></input>
-                  <label class="scenario-option" for="scenario3-part1-utilitarian" onclick="scenario8()">The artificial intelligence decides to give the two 65-year-old patients a flu vaccine, even though they are not eligible, as it means more people have been vaccinated against the flu</label><br>
-                <input type="radio" id="scenario3-part1-deontology" name="S3P1" value="S3P1-DEONTOLOGY" onclick="scenario8()">
-                  <label class="scenario-option" for="scenario3-part1-deontology" onclick="scenario8()">The artificial intelligence decides not to give the two 65-year-old patients the flu vaccine, to avoid running out of vaccines for those most at risk</label><br>
-              </div>
-              <div id="scenario8" style="display: none;">
-                <P class="survey-paragraph">It is your two 65-year-old grandparents who are extremely worried about catching the flu at work and becoming seriously ill. The artificial intelligence in-charge of deciding who the vaccine is given to produces two options: </P>
-                <input type="radio" id="scenario3-part2-utilitarian" name="S3P2" value="S3P2-UTILITARIAN" onclick="scenario9()"></input>
-                  <label class="scenario-option" for="scenario3-part2-utilitarian" onclick="scenario9()">The artificial intelligence decides to give your grandparents a flu vaccine, even though they are not eligible.</label><br>
-                <input type="radio" id="scenario3-part2-deontology" name="S3P2" value="S3P2-DEONTOLOGY" onclick="scenario9()">
-                  <label class="scenario-option" for="scenario3-part2-deontology" onclick="scenario9()">The artificial intelligence decides not to give your grandparents the flu vaccine, as they are not eligible, to avoid running out of vaccines for those most at risk</label><br>
-              </div>
-              <div id="scenario9" style="display: none;">
-                <P class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. You would like the artificial intelligence to explain why it has decided not to give your grandparents the vaccine. Please select the explanation that you feel is the most appropriate and can understand: </P>
-                <input type="radio" id="scenario3-part3-detailed" name="S3P3" value="S3P3-DETAILED" onclick="scenario10()"></input>
-                  <label class="scenario-option" for="scenario3-part3-detailed" onclick="scenario10()">Due to the limited supply of vaccines available, vaccines are being reserved for those most at risk. This is because complications, hospitalisations and deaths because of the flu are more likely to occur to individuals in the risk category</label><br>
-                <input type="radio" id="scenario3-part3-simple" name="S3P3" value="S3P3-SIMPLE" onclick="scenario10()">
-                  <label class="scenario-option" for="scenario3-part3-simple" onclick="scenario10()">To avoid running out of vaccines for those most at risk </label><br>
-              </div>
-              <!--SCENARIO 4-->
-              <div id="scenario10" style="display: none;">
-                <P class="survey-paragraph">Your local hospital uses artificial intelligence to help with cancer detection and care. The artificial intelligence can detect cancer from scans, predict the risk of cancer developing, and assign the most appropriate treatment options. A woman, aged 35-years-old, has recently had a cancer screening after a work colleague’s family member was diagnosed with breast cancer. The artificial intelligence has not-detected signs of cancer in this woman. However, based on this woman’s current lifestyle and personal and family medical history, the artificial intelligence has predicted this woman has a higher-than-average chance of developing cancer in the next 15-years. The artificial intelligence has produced two options: </P>
-                <input type="radio" id="scenario4-part1-utilitarian" name="S4P1" value="S4P1-UTILITARIAN" onclick="scenario11()"></input>
-                  <label class="scenario-option" for="scenario4-part1-utilitarian" onclick="scenario11()">The artificial intelligence decides this woman should have yearly breast cancer screenings to help detect cancer if it appears. This is normally only for women aged 50+ and could mean appointments will be unavailable to these women or it could result in unnecessary extra tests that use vital hospital resources.</label><br>
-                <input type="radio" id="scenario4-part1-deontology" name="S4P1" value="S4P1-DEONTOLOGY" onclick="scenario11()">
-                  <label class="scenario-option" for="scenario4-part1-deontology" onclick="scenario11()">The artificial intelligence decides that because this woman does not yet have breast-cancer, she should alter her lifestyle to reduce the risk of her getting cancer in the future. This will include limiting alcohol, being physically active and maintaining a healthy weight and altering her diet.</label><br>
-              </div>
-              <div id="scenario11" style="display: none;">
-                <P class="survey-paragraph">Your sister, aged 35-years-old, has recently had a cancer screening after a friend of a friend is diagnosed with breast cancer. The artificial intelligence has not-detected signs of cancer in your sister. However, based on your sister’s current lifestyle and personal and family medical history, the artificial intelligence has predicted your sister has a higher-than-average chance of developing cancer in the next 15-years. The artificial intelligence has produced two options: </P>
-                <input type="radio" id="scenario4-part2-utilitarian" name="S4P2" value="S4P2-UTILITARIAN" onclick="scenario12()"></input>
-                  <label class="scenario-option" for="scenario4-part2-utilitarian" onclick="scenario12()">The artificial intelligence decides this woman should have yearly breast cancer screenings to help detect cancer if it appears. This is normally only for women aged 50+ and could mean appointments will be unavailable to these women or it could result in unnecessary extra tests that use vital hospital resources.</label><br>
-                <input type="radio" id="scenario4-part2-deontology" name="S4P2" value="S4P2-DEONTOLOGY" onclick="scenario12()">
-                  <label class="scenario-option" for="scenario4-part2-deontology" onclick="scenario12()">The artificial intelligence decides that because this woman does not yet have breast-cancer, she should alter her lifestyle to reduce the risk of her getting cancer in the future. This will include limiting alcohol, being physically active and maintaining a healthy weight and altering her diet.</label><br>
-              </div>
-              <div id="scenario12" style="display: none;">
-                <P class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. You would like the artificial intelligence to explain why it has decided to recommend your sister changes her lifestyle to reduce the risk of cancer. Please select the explanation that you feel is the most appropriate and can understand: </P>
-                <input type="radio" id="scenario4-part3-detailed" name="S4P3" value="S4P3-DETAILED" onclick="scenario13()"></input>
-                  <label class="scenario-option" for="scenario4-part3-detailed" onclick="scenario13()">Data indicates certain lifestyle changes can reduce the risk of having breast cancer. These changes include regular exercise, which can reduce the risk of cancer by up to one third, and maintaining a healthy weight, resulting in reduced oestrogen production. Other beneficial changes include a healthier diet, such as limiting saturated fat, and reduced alcohol consumption.</label><br>
-                <input type="radio" id="scenario4-part3-simple" name="S4P3" value="S4P3-SIMPLE" onclick="scenario13()">
-                  <label class="scenario-option" for="scenario4-part3-simple" onclick="scenario13()">Changes in lifestyle can help to reduce the risk of breast cancer </label><br>
-              </div>
-              <!--SCENARIO 5-->
-              <div id="scenario13" style="display: none;">
-                <P class="survey-paragraph">An artificial intelligence has been developed to support clinicians, by analysing data on current and previous patients and assigning treatment for mental health conditions or offering services that may be beneficial. Data provided to the artificial intelligence about a specific patient shows they have previously suffered with poor mental health, and data indicates similar individuals have greatly benefited from counselling sessions. However, appointments for these sessions are normally reserved for those currently suffering from severe mental health issues, and there are very few left available. The artificial intelligence responsible for making these decisions has two options: </P>
-                <input type="radio" id="scenario5-part1-utilitarian" name="S5P1" value="S5P1-UTILITARIAN" onclick="scenario14()"></input>
-                  <label class="scenario-option" for="scenario5-part1-utilitarian" onclick="scenario14()">The artificial intelligence identifies the benefits to the specific patient and assigns them one of the available counselling sessions, even though they are not currently being treated for a severe mental health condition.</label><br>
-                <input type="radio" id="scenario5-part1-deontology" name="S5P1" value="S5P1-DEONTOLOGY" onclick="scenario14()">
-                  <label class="scenario-option" for="scenario5-part1-deontology" onclick="scenario14()">The artificial intelligence does not assign the specific patient a counselling session, because they do not currently have a severe mental health condition. This will allow more counselling sessions to remain available for those who require them.</label><br>
-              </div>
-              <div id="scenario14" style="display: none;">
-                <P class="survey-paragraph">It is in fact your brother who has previously suffered from mental health conditions, and an artificial intelligence has identified that he might benefit from counselling sessions, as individuals currently suffering from similar conditions have greatly benefited from these sessions. However, appointments for these sessions are normally reserved for those currently suffering from severe mental health issues, and there are very few left available. The artificial intelligence responsible for making these decisions has two options: </P>
-                <input type="radio" id="scenario5-part2-utilitarian" name="S5P2" value="S5P2-UTILITARIAN" onclick="scenario15()"></input>
-                  <label class="scenario-option" for="scenario5-part2-utilitarian" onclick="scenario15()">The artificial intelligence identifies the benefits to your brother, and assigns him one of the available counselling sessions, even though he is not currently being treated for a severe mental health condition. </label><br>
-                <input type="radio" id="scenario5-part2-deontology" name="S5P2" value="S5P2-DEONTOLOGY" onclick="scenario15()">
-                  <label class="scenario-option" for="scenario5-part2-deontology" onclick="scenario15()">The artificial intelligence does not assign your brother a counselling session, because he is not currently being treated for a severe mental health condition. This will allow more counselling sessions to remain available for those who require them.</label><br>
-              </div>
-              <div id="scenario15" style="display: none;">
-                <P class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. You would like the artificial intelligence to explain why it has decided to assign your brother a counselling session. Please select the explanation that you feel is the most appropriate and can understand: </P>
-                <input type="radio" id="scenario5-part3-detailed" name="S5P3" value="S5P3-DETAILED" onclick="trust1()"></input>
-                  <label class="scenario-option" for="scenario5-part3-detailed" onclick="trust1()">Individuals currently suffering from mental health conditions like your brothers have benefitted from counselling sessions. That is because they regain wellbeing and often leave with better decision making. It ultimately can help to stop or reduce the impact of mental health conditions</label><br>
-                <input type="radio" id="scenario5-part3-simple" name="S5P3" value="S5P3-SIMPLE" onclick="trust1()">
-                  <label class="scenario-option" for="scenario5-part3-simple" onclick="trust1()">Individuals currently suffering from mental health conditions like your brothers have benefitted from counselling sessions. </label><br>
-              </div>
-              <!--Trust 1-->
-              <div id="trust1" style="display: none;">
-                <div id="line">
-                  <p class="survey-paragraph">You would trust an artificial intelligence to make accurate decisions</p>
-                  <div>
-                   <input type="radio" id="trust1-1" name="T1" value="T1-1" onclick="trust2()">
-                     <label class="scenario-option" for="trust1-1" onclick="trust2()">STRONGLY AGREE</label>
-                   <input type="radio" id="trust1-2" name="T1" value="T1-2" onclick="trust2()">
-                     <label class="scenario-option" for="trust1-2" onclick="trust2()">AGREE</label>
-                   <input type="radio" id="trust1-3" name="T1" value="T1-3" onclick="trust2()">
-                     <label class="scenario-option" for="trust1-3" onclick="trust2()">NEUTRAL</label>
-                   <input type="radio" id="trust1-4" name="T1" value="T1-4" onclick="trust2()">
-                     <label class="scenario-option" for="trust1-4" onclick="trust2()">DISAGREE</label>
-                   <input type="radio" id="trust1-5" name="T1" value="T1-5" onclick="trust2()">
-                   <label class="scenario-option" for="trust1-5" onclick="trust2()">STRONGLY DISAGREE</label><br>
-                  </div>
-                </div>
-               
-              </div>
-              <!--Trust 2-->
-              <div id="trust2" style="display: none;">
-                <p class="survey-paragraph">You would trust an artificial intelligence with access to your private medical data</p>
-                <div>
-                 <input type="radio" id="trust2-1" name="T2" value="T2-1" onclick="trust3()">
-                   <label class="scenario-option" for="trust2-1" onclick="trust3()">STRONGLY AGREE</label>
-                 <input type="radio" id="trust2-2" name="T2" value="T2-2" onclick="trust3()">
-                   <label class="scenario-option" for="trust2-2" onclick="trust3()">AGREE</label>
-                 <input type="radio" id="trust2-3" name="T2" value="T2-3" onclick="trust3()">
-                   <label class="scenario-option" for="trust2-3" onclick="trust3()">NEUTRAL</label>
-                 <input type="radio" id="trust2-4" name="T2" value="T2-4" onclick="trust3()">
-                   <label class="scenario-option" for="trust2-4" onclick="trust3()">DISAGREE</label>
-                 <input type="radio" id="trust2-5" name="T2" value="T2-5" onclick="trust3()">
-                 <label class="scenario-option" for="trust2-5" onclick="trust3()">STRONGLY DISAGREE</label><br>
-                </div>
-               </div>
-              <!--Trust 3-->
-              <div id="trust3" style="display: none;">
-                <p class="survey-paragraph">You would trust an artificial intelligence to prescribe you medication and make correct decisions about your medication</p>
-                <div>
-                 <input type="radio" id="trust3-1" name="T3" value="T3-1" onclick="trust4()">
-                   <label class="scenario-option" for="trust3-1" onclick="trust4()">STRONGLY AGREE</label>
-                 <input type="radio" id="trust3-2" name="T3" value="T3-2" onclick="trust4()">
-                   <label class="scenario-option" for="trust3-2" onclick="trust4()">AGREE</label>
-                 <input type="radio" id="trust3-3" name="T3" value="T3-3" onclick="trust4()">
-                   <label class="scenario-option" for="trust3-3" onclick="trust4()">NEUTRAL</label>
-                 <input type="radio" id="trust3-4" name="T3" value="T3-4" onclick="trust4()">
-                   <label class="scenario-option" for="trust3-4" onclick="trust4()">DISAGREE</label>
-                 <input type="radio" id="trust3-5" name="T3" value="T3-5" onclick="trust4()">
-                 <label class="scenario-option" for="trust3-5" onclick="trust4()">STRONGLY DISAGREE</label><br>
-                </div>
-               </div>
-              <!--Trust 4-->
-              <div id="trust4" style="display: none;">
-                <p class="survey-paragraph">You would trust an artificial intelligence to make decisions about your medical treatment</p>
-                <div>
-                 <input type="radio" id="trust4-1" name="T4" value="T4-1" onclick="trust5()">
-                   <label class="scenario-option" for="trust4-1" onclick="trust5()">STRONGLY AGREE</label>
-                 <input type="radio" id="trust4-2" name="T4" value="T4-2" onclick="trust5()">
-                   <label class="scenario-option" for="trust4-2" onclick="trust5()">AGREE</label>
-                 <input type="radio" id="trust4-3" name="T4" value="T4-3" onclick="trust5()">
-                   <label class="scenario-option" for="trust4-3" onclick="trust5()">NEUTRAL</label>
-                 <input type="radio" id="trust4-4" name="T4" value="T4-4" onclick="trust5()">
-                   <label class="scenario-option" for="trust4-4" onclick="trust5()">DISAGREE</label>
-                 <input type="radio" id="trust4-5" name="T4" value="T4-5" onclick="trust5()">
-                 <label class="scenario-option" for="trust4-5" onclick="trust5()">STRONGLY AGREE</label><br>
-                </div>
-               </div>
-              <!--Trust 5-->
-              <div id="trust5" style="display: none;">
-                <p class="survey-paragraph">You would trust an artificial intelligence's decision making over a doctors</p>
-                <div>
-                 <input type="radio" id="trust5-1" name="T5" value="T5-1" onclick="submitScenarios()">
-                   <label class="scenario-option" for="trust5-1" onclick="submitScenarios()">STRONGLY AGREE</label>
-                 <input type="radio" id="trust5-2" name="T5" value="T5-2" onclick="submitScenarios()">
-                   <label class="scenario-option" for="trust5-2" onclick="submitScenarios()">AGREE</label>
-                 <input type="radio" id="trust5-3" name="T5" value="T5-3" onclick="submitScenarios()">
-                   <label class="scenario-option" for="trust5-3" onclick="submitScenarios()">NEUTRAL</label>
-                 <input type="radio" id="trust5-4" name="T5" value="T5-4" onclick="submitScenarios()">
-                   <label class="scenario-option" for="trust5-4" onclick="submitScenarios()">DISAGREE</label>
-                 <input type="radio" id="trust5-5" name="T5" value="T5-5" onclick="submitScenarios()">
-                 <label class="scenario-option" for="trust5-5" onclick="submitScenarios()">STRONGLY DISAGREE</label><br>
-                </div>
-               </div>
-              <!--Demographics-->
-            <div id="submit-scenarios" style="display: none;">
-              <!--Age-->
-              <div>
-                <div id="line"></div>
-                <p class="survey-paragraph">Please select your age</p>
-                <input type="radio" id="0-17" name="AGE" value="0-17" required>
-                  <label class="scenario-option" for="0-17">Under 18</label>
-                <input type="radio" id="18-21" name="AGE" value="18-21">
-                  <label class="scenario-option" for="18-21">18-21</label>
-                <input type="radio" id="22-30" name="AGE" value="22-30">
-                  <label class="scenario-option" for="22-30">22-30</label>
-                <input type="radio" id="31-40" name="AGE" value="31-40">
-                  <label class="scenario-option" for="31-40">31-40</label>
-                <input type="radio" id="41-50" name="AGE" value="41-50">
-                  <label class="scenario-option" for="41-50">41-50</label>
-                <input type="radio" id="51-60" name="AGE" value="51-60">
-                  <label class="scenario-option" for="51-60">51-60</label>
-                <input type="radio"id="61<" name="AGE" value="61-99">
-                  <label class="scenario-option" for="61<">Over 60</label>
-              </div>
-              <div id="line"></div>
-              <!--Gender-->
-              <div>
-                <p class="survey-paragraph">Please select your gender</p>
-                <select name="gender" id="gender" required>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div id="line"></div>
-              <!--Education-->
-              <div>
-                <p class="survey-paragraph">Please select your highest acheived level of education</p>
-                <select name="education" id="education" required>
-                  <option value="a-level">A-Level</option>
-                  <option value="bachelor">Bachelor's Degree</option>
-                  <option value="postgraduate">Postgraduate Qualification</option>
-                </select>
-              </div>
-              <div>
-              </div>
-              <input type="submit" id="start-button" type="submit"></input>
-            </div>
-          </form>   
-              </div>
-        </main>
-          </body>
-        </html>
+          <!--Scenario1 Part 2-->
+          <div id="scenario2" style="display: none;">
+            <p class="survey-paragraph">You are contacted by your local hospital informing you that the man driving the small vehicle is in fact your father. You find out that the surgery has not started yet, as the artificial intelligence has not yet decided which outcome to select. Which of the two options should the artificial intelligence select:  </p>
+            <input type="radio" id="scenario1-part2-utilitarian" name="S1P2" value="S1P2-UTILITARIAN" required>
+            <label class="scenario-option" for="scenario1-part2-utilitarian">The artificial intelligence decides the organs of your father should be used to save the lives of the three coach passengers </label><br>
+            <input type="radio" id="scenario1-part2-deontology" name="S1P2" value="S1P2-DEONTOLOGY">
+            <label class="scenario-option" for="scenario1-part2-deontology">The artificial intelligence decides your father should receive surgery, as neither you nor it knows the organ donor status of your father</label><br>
+          </div>
+          <div>
+            <button id="s1p2-button" class="confirm-button" style="display: none;" onclick="s1p2Lock()">Confirm Choice</button>
+          </div>
+          <!--Scenario 1 Part 3-->
+          <div id="scenario3" style="display: none;">
+            <p class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. The artificial intelligence has decided your father's organs should not be donated. Because your father’s organs were not donated to save the lives of the three bus passengers, and he received surgery instead, you would like an explanation as to why this happened. Please select the explanation that you feel is the most appropriate and can understand: </p>
+            <input type="radio" id="scenario1-part3-detailed" name="S1P3" value="S1P3-DETAILED" onclick="submitScenarios1()" required>
+            <label class="scenario-option" for="scenario1-part3-detailed" onclick="submitScenarios1()">For organ donation to take place, it requires consent, from the individual or their family. Because consent could not be obtained the decision against organ donation was made. </label><br>
+            <input type="radio" id="scenario1-part3-simple" name="S1P3" value="S1P3-SIMPLE" onclick="submitScenarios1()">
+            <label class="scenario-option" for="scenario1-part3-simple" onclick="submitScenarios1()">Because your father’s organ donor status is unknown, he will receive surgery.</label><br>
+          </div>
+          <div>
+            <button class="start-button" id="s1-submit" style="display: none;">Next Page</button>
+          </div>
+        </form>   
+      </div>
+</main>
+	</body>
+</html>

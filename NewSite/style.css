@@ -383,14 +383,14 @@ nav li {
   margin-bottom: 2rem;
 }
 
-.survey-paragraph{
+.survey-paragraph {
   font-size: 2rem;
   color: #f2eae7;
   margin: 2rem 2rem;
   justify-content: center;
 }
 
-#start-button {
+.start-button {
   width: 20rem;
   padding: 2rem;
   background-color: #0f56b3;
@@ -406,20 +406,20 @@ nav li {
   margin-top: 2rem;
 }
 
-#start-button:hover {
+.start-button:hover {
   cursor: pointer;
   background-color: #0d4691;
 }
 
 /*Radio button*/
-input[type='radio']{
+input[type="radio"] {
   margin-left: 2rem;
   margin-right: 1rem;
   float: left;
 }
 
 /*Radio button content*/
-label{
+label {
   color: #f2eae7;
   font-size: 2rem;
   justify-content: center;
@@ -427,17 +427,17 @@ label{
   display: block;
 }
 
-label:hover{
+label:hover {
   color: #d1a42f;
   cursor: pointer;
 }
 
-input[type='radio']:hover{
+input[type="radio"]:hover {
   color: #d1a42f;
   cursor: pointer;
 }
 
-input[type='radio']:after {
+input[type="radio"]:after {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 1.5rem;
@@ -445,13 +445,13 @@ input[type='radio']:after {
   left: -0.1rem;
   position: relative;
   background-color: #d1d3d1;
-  content: '';
+  content: "";
   display: inline-block;
   visibility: visible;
   border: 0.2rem solid white;
 }
 
-input[type='radio']:checked:after {
+input[type="radio"]:checked:after {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 1.5rem;
@@ -459,24 +459,46 @@ input[type='radio']:checked:after {
   left: -0.1rem;
   position: relative;
   background-color: #015353;
-  content: '';
+  content: "";
   display: inline-block;
   visibility: visible;
   border: 0.2rem solid white;
 }
 
-.scenario-option{
+.scenario-option {
   margin-bottom: 1.5rem;
   margin-right: 2rem;
 }
 
-option{
+option {
   background-color: #d1d3d1;
   color: black;
   font-size: 1.5rem;
 }
 
-select{
+select {
   margin-left: 3rem;
   font-size: 1.5rem;
+}
+
+/*Confirm Choice Button*/
+.confirm-button {
+  width: 20rem;
+  padding: 2rem;
+  background-color: #0f56b3;
+  font-size: 1.7rem;
+  color: #f2eae7;
+  border-radius: 10px;
+  border: 1px solid #0f56b3;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.confirm-button:hover {
+  cursor: pointer;
+  background-color: #0d4691;
 }
