@@ -177,6 +177,14 @@ $T5=$_SESSION["T5"];//T5 Variable
 
   $conn = null;
   ?>
+
+<?php
+// remove all session variables
+session_unset();
+
+// destroy the session
+session_destroy();
+?>
 </div>
 
 </main>
