@@ -81,6 +81,7 @@ $_SESSION["T5"]=$_POST["T5"];//T5 Variable
       <div>
         <p class="survey-paragraph">Please select your highest acheived level of education</p>
         <select name="education" id="education" required>
+        <option value="a-level">None</option>
           <option value="a-level">A-Level</option>
           <option value="bachelor">Bachelor's Degree</option>
           <option value="postgraduate">Postgraduate Qualification</option>
