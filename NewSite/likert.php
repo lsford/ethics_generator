@@ -19,7 +19,7 @@ $_SESSION["S5P3"]=$_POST["S5P3"];//S5P3 Variable
     <body id="cdss-body">
         <header>
             <nav class="navigation-index">
-               <a href="index.html"><h1 id="title">ƎE Exploring Ethics</h1></a>
+               <a href="index.html"><h1 id="title">Ethics Explored</h1></a>
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
                 <li><a href="index.html">Home</a></li>
@@ -43,6 +43,7 @@ $_SESSION["S5P3"]=$_POST["S5P3"];//S5P3 Variable
     <br>
     <br>
   </div>
+  <h3 id="title-cdss">HIT Survey</h3>
 <div id="cdss-container">
     <form method="POST" action="demographic.php">
         <div id="trust1">

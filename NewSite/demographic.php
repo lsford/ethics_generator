@@ -21,7 +21,7 @@ $_SESSION["T5"]=$_POST["T5"];//T5 Variable
     <body id="cdss-body">
         <header>
             <nav class="navigation-index">
-               <a href="index.html"><h1 id="title">ƎE Exploring Ethics</h1></a>
+               <a href="index.html"><h1 id="title">Ethics Explored</h1></a>
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
                 <li><a href="index.html">Home</a></li>
@@ -45,6 +45,7 @@ $_SESSION["T5"]=$_POST["T5"];//T5 Variable
     <br>
     <br>
   </div>
+  <h3 id="title-cdss">HIT Survey</h3>
 <div id="cdss-container">
     <form method="POST" action="scenario_results.php">
     <div id="submit-scenarios">
@@ -81,7 +82,7 @@ $_SESSION["T5"]=$_POST["T5"];//T5 Variable
       <div>
         <p class="survey-paragraph">Please select your highest acheived level of education</p>
         <select name="education" id="education" required>
-        <option value="a-level">None</option>
+        <option value="none">None</option>
           <option value="a-level">A-Level</option>
           <option value="bachelor">Bachelor's Degree</option>
           <option value="postgraduate">Postgraduate Qualification</option>

@@ -166,7 +166,7 @@ function s3p1Lock() {
 //Lock S3P2 and Display S3P3
 function s3p2Lock() {
   if (document.getElementById("scenario3-part2-utilitarian").checked) {
-    document.getElementById("scenario3-part2-utilitarian").disabled = true;
+    document.getElementById("scenario3-part2-deontology").disabled = true;
   } else if (document.getElementById("scenario3-part2-deontology").checked) {
     document.getElementById("scenario3-part2-utilitarian").disabled = true;
   }
