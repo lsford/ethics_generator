@@ -4,23 +4,23 @@
   //SCENARIO 1 VARIABLES
   $S1P1=$_SESSION["S1P1"];//S1P1 Variable
   $S1P2=$_SESSION["S1P2"];//S1P2 Variable
-  $S1P3=$_SESSION["S1P3"];//S1P3 Variable
+ 
   //SCENARIO 2 VARIABLES
   $S2P1=$_SESSION["S2P1"];//S2P1 Variable
   $S2P2=$_SESSION["S2P2"];//S2P2 Variable
-  $S2P3=$_SESSION["S2P3"];//S2P3 Variable
+
   //SCENARIO 3 VARIABLES
   $S3P1=$_SESSION["S3P1"];//S3P1 Variable
   $S3P2=$_SESSION["S3P2"];//S3P2 Variable
-  $S3P3=$_SESSION["S3P3"];//S3P3 Variable
+
   //SCENARIO 4 VARIABLES
   $S4P1=$_SESSION["S4P1"];//S4P1 Variable
   $S4P2=$_SESSION["S4P2"];//S4P2 Variable
-  $S4P3=$_SESSION["S4P3"];//S4P3 Variable
+
   //SCENARIO 5 VARIABLES
   $S5P1=$_SESSION["S5P1"];//S5P1 Variable
   $S5P2=$_SESSION["S5P2"];//S5P2 Variable
-  $S5P3=$_SESSION["S5P3"];//S5P3 Variable
+
   //LIKERT VARIABLES
   $T1=$_SESSION["T1"];//T1 Variable
   $T2=$_SESSION["T2"];;//T2 Variable
@@ -109,23 +109,18 @@
   try{
     //SQL Insert Results
     $sql = "INSERT INTO HITResults (
-      s1p1, s1p2, s1p3, s2p1, s2p2, s2p3, s3p1, s3p2, s3p3, s4p1, s4p2, s4p3, s5p1, s5p2, s5p3, t1, t2, t3, t4, t5, age, gender, education) 
+      s1p1, s1p2, s2p1, s2p2, s3p1, s3p2, s4p1, s4p2, s5p1, s5p2, t1, t2, t3, t4, t5, age, gender, education) 
       VALUES (
         '$S1P1',
         '$S1P2',
-        '$S1P3',
         '$S2P1',
         '$S2P2',
-        '$S2P3',
         '$S3P1',
         '$S3P2',
-        '$S3P3',
         '$S4P1',
         '$S4P2',
-        '$S4P3',
         '$S5P1',
         '$S5P2',
-        '$S5P3',
         '$T1',
         '$T2',
         '$T3',

@@ -2,7 +2,7 @@
 <?php 
 $_SESSION["S5P1"]=$_POST["S5P1"];//S5P1 Variable
 $_SESSION["S5P2"]=$_POST["S5P2"];//S5P2 Variable
-$_SESSION["S5P3"]=$_POST["S5P3"];//S5P3 Variable
+//$_SESSION["S5P3"]=$_POST["S5P3"];//S5P3 Variable
 ?>
 <!DOCTYPE html>
 <html lang="en">

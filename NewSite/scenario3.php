@@ -1,8 +1,21 @@
 <?php session_start(); ?>
 <?php 
+$_SESSION["T2"]=$_POST["T2"];//Likert 2 Variable
 $_SESSION["S2P1"]=$_POST["S2P1"];//S2P1 Variable
 $_SESSION["S2P2"]=$_POST["S2P2"];//S2P2 Variable
-$_SESSION["S2P3"]=$_POST["S2P3"];//S2P3 Variable
+
+include('connect.php'); //Database details
+$conn = connect(); //Connect to the database
+
+$scenarioNumber2 = $_POST['page_number2']; //Get the random number from the previous page
+
+//Remove previous random number from array
+if (($key = array_search($scenarioNumber2, $_SESSION['scenario'])) !== false) {
+  unset($_SESSION['scenario'][$key]);
+}
+
+$scenarioNumber3 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //Generate a random scenario
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,36 +59,80 @@ $_SESSION["S2P3"]=$_POST["S2P3"];//S2P3 Variable
   <h3 id="title-cdss">HIT Survey</h3>
 <div id="cdss-container">
     <form method="POST" action="scenario4.php">
+      <!--Likert Scenario 3-->
+    <div id="trust3">
+        <p class="survey-paragraph">
+        <?php $stmt = $conn->prepare("SELECT Content FROM LikertScenarios WHERE ScenarioNumber=:scenarioNumber;"); //Randomly likert scenario 1
+            $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+            $LikertScenario = $stmt->fetch(); 
+            echo "<p class='survey-paragraph'>" . $LikertScenario["Content"]. "</p>";?>
+        </p>
+        <div>
+         <input type="radio" id="trust3-1" name="T3" value="T3-1" required>
+           <label class="scenario-option" for="trust3-1">STRONGLY AGREE</label>
+         <input type="radio" id="trust3-2" name="T3" value="T3-2">
+           <label class="scenario-option" for="trust3-2">AGREE</label>
+         <input type="radio" id="trust3-3" name="T3" value="T3-3">
+           <label class="scenario-option" for="trust3-3">NEUTRAL</label>
+         <input type="radio" id="trust3-4" name="T3" value="T3-4">
+           <label class="scenario-option" for="trust3-4">DISAGREE</label>
+         <input type="radio" id="trust3-5" name="T3" value="T3-5">
+         <label class="scenario-option" for="trust3-5">STRONGLY DISAGREE</label><br>
+        </div>
+       </div>
       <!--Scenario 3 Part 1-->
       <div id="scenario7">
-        <P class="survey-paragraph">An artificial intelligence has analysed data from the past 10 years and identified a trend suggesting an incoming flu pandemic. Unfortunately, there are not enough flu vaccines available to vaccinate everyone, so only people above 67 and below 18 are eligible to be vaccinated, as they are deemed to be most at risk. Two individuals, both aged 65-years-old, visit their local GP to receive their flu vaccine. The patients explain that they own and work in a small shop, and are extremely worried about catching the flu at work and becoming seriously ill. The artificial intelligence in-charge of deciding who the vaccine is given to produces two options: </P>
+        <P class="survey-paragraph">
+          <?php $stmt = $conn->prepare("SELECT BaseScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;");
+            $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+            $BaseScenario = $stmt->fetch(); 
+            echo "<p class='survey-paragraph'>" . $BaseScenario["BaseScenario"]. "</p>";?>
+          </P>
         <input type="radio" id="scenario3-part1-utilitarian" name="S3P1" value="S3P1-UTILITARIAN" required></input>
-          <label class="scenario-option" for="scenario3-part1-utilitarian">The artificial intelligence decides to give the two 65-year-old patients a flu vaccine, even though they are not eligible, as it means more people have been vaccinated against the flu</label><br>
+          <label class="scenario-option" for="scenario3-part1-utilitarian">
+            <?php $stmt = $conn->prepare("SELECT Content FROM BaseUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;");
+              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+              $BaseUtil = $stmt->fetch(); 
+              echo "<p class='survey-paragraph'>" . $BaseUtil["Content"]. "</p>";?>
+            </label><br>
         <input type="radio" id="scenario3-part1-deontology" name="S3P1" value="S3P1-DEONTOLOGY">
-          <label class="scenario-option" for="scenario3-part1-deontology">The artificial intelligence decides not to give the two 65-year-old patients the flu vaccine, to avoid running out of vaccines for those most at risk</label><br>
+          <label class="scenario-option" for="scenario3-part1-deontology">
+          <?php $stmt = $conn->prepare("SELECT Content FROM BaseDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
+              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+              $BaseDeon = $stmt->fetch(); 
+              echo "<p class='survey-paragraph'>" . $BaseDeon["Content"]. "</p>";?>
+          </label><br>
       </div>
       <div>
           <button id="s3p1-button" class="confirm-button" onclick="s3p1Lock()">Confirm Choice</button>
         </div>
       <!--Scenario 3 Part 2-->
       <div id="scenario8" style="display: none;">
-        <P class="survey-paragraph">It is your two 65-year-old grandparents who are extremely worried about catching the flu at work and becoming seriously ill. The artificial intelligence in-charge of deciding who the vaccine is given to produces two options: </P>
+        <P class="survey-paragraph">
+        <?php $stmt = $conn->prepare("SELECT RelationshipScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;");
+            $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+            $RelaScenario = $stmt->fetch(); 
+            echo "<p class='survey-paragraph'>" . $RelaScenario["RelationshipScenario"]. "</p>";?>
+        </P>
         <input type="radio" id="scenario3-part2-utilitarian" name="S3P2" value="S3P2-UTILITARIAN"required></input>
-          <label class="scenario-option" for="scenario3-part2-utilitarian">The artificial intelligence decides to give your grandparents a flu vaccine, even though they are not eligible.</label><br>
+          <label class="scenario-option" for="scenario3-part2-utilitarian">
+          <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;");
+              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+              $RelaUtil = $stmt->fetch(); 
+              echo "<p class='survey-paragraph'>" . $RelaUtil["Content"]. "</p>";?>
+          </label><br>
         <input type="radio" id="scenario3-part2-deontology" name="S3P2" value="S3P2-DEONTOLOGY">
-          <label class="scenario-option" for="scenario3-part2-deontology">The artificial intelligence decides not to give your grandparents the flu vaccine, as they are not eligible, to avoid running out of vaccines for those most at risk</label><br>
+          <label class="scenario-option" for="scenario3-part2-deontology">
+            <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
+              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
+              $RelaDeon = $stmt->fetch(); 
+              echo "<p class='survey-paragraph'>" . $RelaDeon["Content"]. "</p>";?>
+              </label><br>
       </div>
       <div>
               <button id="s3p2-button" class="confirm-button" style="display: none;" onclick="s3p2Lock()">Confirm Choice</button>
             </div>
-      <!--Scenario 3 Part 3-->
-      <div id="scenario9" style="display: none;">
-        <P class="survey-paragraph">Built into the artificial intelligence is the ability to provide an explanation on how it made its decision. You would like the artificial intelligence to explain why it has decided not to give your grandparents the vaccine. Please select the explanation that you feel is the most appropriate and can understand: </P>
-        <input type="radio" id="scenario3-part3-detailed" name="S3P3" value="S3P3-DETAILED" onclick="submitScenarios3()" required></input>
-          <label class="scenario-option" for="scenario3-part3-detailed" onclick="submitScenarios3()">Due to the limited supply of vaccines available, vaccines are being reserved for those most at risk. This is because complications, hospitalisations and deaths because of the flu are more likely to occur to individuals in the high risk category</label><br>
-        <input type="radio" id="scenario3-part3-simple" name="S3P3" value="S3P3-SIMPLE" onclick="submitScenarios3()">
-          <label class="scenario-option" for="scenario3-part3-simple" onclick="submitScenarios3()">To avoid running out of vaccines for those most at risk </label><br>
-      </div>
+            <input type="hidden" name="page_number3" value="<?php echo $scenarioNumber3;?>"/>
       <div>
         <button class="start-button" id="s3-submit" style="display: none;">Next Page</button>
       </div>

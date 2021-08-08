@@ -1,10 +1,8 @@
 <?php session_start(); ?>
 <?php 
-$_SESSION["T1"]=$_POST["T1"];//T1 Variable
-$_SESSION["T2"]=$_POST["T2"];//T2 Variable
-$_SESSION["T3"]=$_POST["T3"];//T3 Variable
-$_SESSION["T4"]=$_POST["T4"];//T4 Variable
-$_SESSION["T5"]=$_POST["T5"];//T5 Variable
+$_SESSION["T5"]=$_POST["T5"];//Likert 4 Variable
+$_SESSION["S5P1"]=$_POST["S5P1"];//S4P1 Variable
+$_SESSION["S5P2"]=$_POST["S5P2"];//S4P2 Variable
 ?>
 <!DOCTYPE html>
 <html lang="en">
