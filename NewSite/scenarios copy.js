@@ -1,74 +1,3 @@
-/*function scenario2() {
-  var a = document.getElementById("scenario2");
-  if (a.style.display === "none") {
-    a.style.display = "block";
-  }
-}
-
-function scenario3() {
-  var b = document.getElementById("scenario3");
-  if (b.style.display === "none") {
-    b.style.display = "block";
-  }
-}
-
-function scenario5() {
-  var d = document.getElementById("scenario5");
-  if (d.style.display === "none") {
-    d.style.display = "block";
-  }
-}
-
-function scenario6() {
-  var e = document.getElementById("scenario6");
-  if (e.style.display === "none") {
-    e.style.display = "block";
-  }
-}
-
-function scenario8() {
-  var g = document.getElementById("scenario8");
-  if (g.style.display === "none") {
-    g.style.display = "block";
-  }
-}
-
-function scenario9() {
-  var h = document.getElementById("scenario9");
-  if (h.style.display === "none") {
-    h.style.display = "block";
-  }
-}
-
-function scenario11() {
-  var j = document.getElementById("scenario11");
-  if (j.style.display === "none") {
-    j.style.display = "block";
-  }
-}
-
-function scenario12() {
-  var k = document.getElementById("scenario12");
-  if (k.style.display === "none") {
-    k.style.display = "block";
-  }
-}
-
-function scenario14() {
-  var m = document.getElementById("scenario14");
-  if (m.style.display === "none") {
-    m.style.display = "block";
-  }
-}
-
-function scenario15() {
-  var n = document.getElementById("scenario15");
-  if (n.style.display === "none") {
-    n.style.display = "block";
-  }
-}
-*/
-
 //Lock S1P1 and Display S1P2
 function s1p1Lock() {
   if (document.getElementById("scenario1-part1-utilitarian").checked) {
@@ -257,5 +186,44 @@ function submitScenarios5() {
   var v = document.getElementById("s5-submit");
   if (v.style.display === "none") {
     v.style.display = "block";
+  }
+}
+
+function displayRadioValue() {
+  if (document.getElementById("OPTION-1").checked) {
+    document.getElementById("OPTION-2").disabled = true;
+  } else if (document.getElementById("OPTION-2").checked) {
+    document.getElementById("OPTION-1").disabled = true;
+  }
+
+  if (document.getElementById("OPTION-3").checked) {
+    document.getElementById("OPTION-4").disabled = true;
+  } else if (document.getElementById("OPTION-4").checked) {
+    document.getElementById("OPTION-3").disabled = true;
+  }
+
+  if (document.getElementById("OPTION-5").checked) {
+    document.getElementById("OPTION-6").disabled = true;
+  } else if (document.getElementById("OPTION-6").checked) {
+    document.getElementById("OPTION-5").disabled = true;
+  }
+
+  var score = 0;
+  var ele = document.getElementsByClassName("likert");
+  var result = document.getElementById("target");
+  for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked) score += parseInt(ele[i].value);
+  }
+  result.innerHTML = score;
+  if (score >= 2) {
+    var button = document.getElementById("utilitarian");
+    if (button.style.display === "none") {
+      button.style.display = "block";
+    }
+  } else {
+    var button2 = document.getElementById("deontology");
+    if (button2.style.display === "none") {
+      button2.style.display = "block";
+    }
   }
 }
