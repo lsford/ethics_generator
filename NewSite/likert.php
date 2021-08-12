@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,13 +79,13 @@
     </div>
     <div>
         <form action="deontology.php" method="POST">
-            <button class="start-button" id="deontology" style="display: none;">Deontology</button>
+            <button class="start-button" id="deontology" style="display: none;">Next Page</button>
             <input type="hidden" name="deontology" value="deontology-path">
         </form>
     </div>
     <div>
         <form action="utilitarian.php" method="POST">
-            <button class="start-button" id="utilitarian" style="display: none;">Utilitarian</button>
+            <button class="start-button" id="utilitarian" style="display: none;">Next Page</button>
             <input type="hidden" name="utilitarian" value="utilitarian-path">
         </form>
     </div>
