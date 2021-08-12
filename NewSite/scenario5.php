@@ -87,7 +87,12 @@ $variable10 = $stmt2->fetch();
         <input type="radio" id="scenario5-part1-utilitarian" name="S5P1" value="S5P1-UTILITARIAN" required></input>
           <label class="scenario-option" for="scenario5-part1-utilitarian">The artificial intelligence identifies the benefits to the specific patient and assigns them <?php echo $variable9['Dead']; ?> of the available counselling sessions, even though they are not currently being treated for a severe mental health condition</label><br>
         <input type="radio" id="scenario5-part1-deontology" name="S5P1" value="S5P1-DEONTOLOGY">
-          <label class="scenario-option" for="scenario5-part1-deontology" >The artificial intelligence does not assign the specific patient a counselling session, because they do not currently have a severe mental health condition. This will allow more counselling sessions to remain available for those who require them</label><br>
+          <label class="scenario-option" for="scenario5-part1-deontology" >
+          <?php $stmt = $conn->prepare("SELECT Content FROM BaseDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
+              $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
+              $BaseDeon = $stmt->fetch(); 
+              echo "<p class='survey-paragraph'>" . $BaseDeon["Content"]. "</p>";?>
+          </label><br>
       </div>
       <div>
               <button id="s5p1-button" class="confirm-button" onclick="s5p1Lock()">Confirm Choice</button>
