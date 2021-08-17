@@ -1,8 +1,6 @@
 <?php session_start(); ?>
 <?php 
-$_SESSION["S5P1"]=$_POST["S5P1"];//S5P1 Variable
-$_SESSION["S5P2"]=$_POST["S5P2"];//S5P2 Variable
-//$_SESSION["S5P3"]=$_POST["S5P3"];//S5P3 Variable
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +13,11 @@ $_SESSION["S5P2"]=$_POST["S5P2"];//S5P2 Variable
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <script src="scenarios.js"></script>
+    <script src="function.js"></script>
     <body id="cdss-body">
         <header>
             <nav class="navigation-index">
                <a href="index.html"><h1 id="title">Ethics Explored</h1></a>
-              <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
                 <li><a href="index.html">Home</a></li>
           <li><a href="scenarios.html">Scenarios</a></li>
@@ -33,102 +30,74 @@ $_SESSION["S5P2"]=$_POST["S5P2"];//S5P2 Variable
 </head>
 <main>
 <div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </div>
-  <h3 id="title-cdss">HIT Survey</h3>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div>
+      <h3 id="title-cdss">Health Information Technology Survey</h3>
+      <p id="description">Here you will be presented with a series of questions regarding the use of autonomous artificial intelligence in healthcare. For some questions you will be shown a written description of a scenario, as well as the scenario outcomes. You are asked to select which of the two outcomes you prefer. The other questions ask you to rate how strongly you agree or disagree with a statement. </p>
+      <p id="description">For the scenario questions, once you have clicked on the outcome you find preferable, please click <b>Confirm Choice</b>. This will lock in your answer, and show you the next scenario. Please press <b>Next Page</b> when you have finished answering a set of questions to move onto the next set. No knowledge of the topic is required to answer the questions. Please answer honestly.</p> 
+    </div>
+    <div id="line">
+    </div>
+    <div>
+    <h3 id="title-cdss">HIT Survey</h3>
+    </div>
 <div id="cdss-container">
-    <form method="POST" action="demographic.php">
-        <div id="trust1">
-          <p class="survey-paragraph">You would trust an artificial intelligence to make accurate decisions</p>
+<form method="POST" action="#">
+        <div id="likert1">
+          <p class="survey-paragraph">An action is always morally correct if the consequences produce more happiness than harm</p>
           <div>
-           <input type="radio" id="trust1-1" name="T1" value="T1-1" required>
-             <label class="scenario-option" for="trust1-1">STRONGLY AGREE</label>
-           <input type="radio" id="trust1-2" name="T1" value="T1-2">
-             <label class="scenario-option" for="trust1-2">AGREE</label>
-           <input type="radio" id="trust1-3" name="T1" value="T1-3">
-             <label class="scenario-option" for="trust1-3">NEUTRAL</label>
-           <input type="radio" id="trust1-4" name="T1" value="T1-4">
-             <label class="scenario-option" for="trust1-4">DISAGREE</label>
-           <input type="radio" id="trust1-5" name="T1" value="T1-5">
-           <label class="scenario-option" for="trust1-5">STRONGLY DISAGREE</label><br>
+           <input class="likert" type="radio" id="OPTION-1" name="L1" value="1" required>
+             <label class="scenario-option" for="OPTION-1">AGREE</label>
+           <input class="likert" type="radio" id="OPTION-2" name="L1" value="0">
+             <label class="scenario-option" for="OPTION-2">DISAGREE</label><br>
           </div>
         </div> 
-      <!--Trust 2-->
-      <div id="trust2">
-        <p class="survey-paragraph">You would trust an artificial intelligence with access to your private medical data</p>
+      <!--Likert 2-->
+      <div id="likert2">
+        <p class="survey-paragraph">Rules should always be followed, even if breaking the rules could produce more happiness</p>
         <div>
-         <input type="radio" id="trust2-1" name="T2" value="T2-1" required>
-           <label class="scenario-option" for="trust2-1">STRONGLY AGREE</label>
-         <input type="radio" id="trust2-2" name="T2" value="T2-2">
-           <label class="scenario-option" for="trust2-2">AGREE</label>
-         <input type="radio" id="trust2-3" name="T2" value="T2-3">
-           <label class="scenario-option" for="trust2-3">NEUTRAL</label>
-         <input type="radio" id="trust2-4" name="T2" value="T2-4">
-           <label class="scenario-option" for="trust2-4">DISAGREE</label>
-         <input type="radio" id="trust2-5" name="T2" value="T2-5">
-         <label class="scenario-option" for="trust2-5">STRONGLY DISAGREE</label><br>
+         <input class="likert" type="radio" id="OPTION-3" name="L2" value="1" required>
+           <label class="scenario-option" for="OPTION-3">AGREE</label>
+         <input class="likert" type="radio" id="OPTION-4" name="L2" value="0">
+           <label class="scenario-option" for="OPTION-4">DISAGREE</label><br>
         </div>
        </div>
-      <!--Trust 3-->
-      <div id="trust3">
-        <p class="survey-paragraph">You would trust an artificial intelligence to prescribe you medication and make correct decisions about your medication</p>
+      <!--Likert 3-->
+      <div id="likert3">
+        <p class="survey-paragraph">The consequences of an action are irrelevant when deciding if the action was morally right</p>
         <div>
-         <input type="radio" id="trust3-1" name="T3" value="T3-1" required>
-           <label class="scenario-option" for="trust3-1">STRONGLY AGREE</label>
-         <input type="radio" id="trust3-2" name="T3" value="T3-2">
-           <label class="scenario-option" for="trust3-2">AGREE</label>
-         <input type="radio" id="trust3-3" name="T3" value="T3-3">
-           <label class="scenario-option" for="trust3-3">NEUTRAL</label>
-         <input type="radio" id="trust3-4" name="T3" value="T3-4">
-           <label class="scenario-option" for="trust3-4">DISAGREE</label>
-         <input type="radio" id="trust3-5" name="T3" value="T3-5">
-         <label class="scenario-option" for="trust3-5">STRONGLY DISAGREE</label><br>
+         <input class="likert" type="radio" id="OPTION-5" name="L3" value="0" required>
+           <label class="scenario-option" for="OPTION-5">AGREE</label>
+         <input class="likert" type="radio" id="OPTION-6" name="L3" value="1">
+           <label class="scenario-option" for="OPTION-6">DISAGREE</label><br>
         </div>
        </div>
-      <!--Trust 4-->
-      <div id="trust4">
-        <p class="survey-paragraph">You would trust an artificial intelligence to make decisions about your medical treatment</p>
-        <div>
-         <input type="radio" id="trust4-1" name="T4" value="T4-1" required>
-           <label class="scenario-option" for="trust4-1">STRONGLY AGREE</label>
-         <input type="radio" id="trust4-2" name="T4" value="T4-2">
-           <label class="scenario-option" for="trust4-2">AGREE</label>
-         <input type="radio" id="trust4-3" name="T4" value="T4-3">
-           <label class="scenario-option" for="trust4-3">NEUTRAL</label>
-         <input type="radio" id="trust4-4" name="T4" value="T4-4">
-           <label class="scenario-option" for="trust4-4">DISAGREE</label>
-         <input type="radio" id="trust4-5" name="T4" value="T4-5">
-         <label class="scenario-option" for="trust4-5">STRONGLY AGREE</label><br>
-        </div>
-       </div>
-      <!--Trust 5-->
-      <div id="trust5">
-        <p class="survey-paragraph">You would trust an artificial intelligence's decision making over a doctors</p>
-        <div>
-         <input type="radio" id="trust5-1" name="T5" value="T5-1" required>
-           <label class="scenario-option" for="trust5-1">STRONGLY AGREE</label>
-         <input type="radio" id="trust5-2" name="T5" value="T5-2">
-           <label class="scenario-option" for="trust5-2">AGREE</label>
-         <input type="radio" id="trust5-3" name="T5" value="T5-3">
-           <label class="scenario-option" for="trust5-3">NEUTRAL</label>
-         <input type="radio" id="trust5-4" name="T5" value="T5-4">
-           <label class="scenario-option" for="trust5-4">DISAGREE</label>
-         <input type="radio" id="trust5-5" name="T5" value="T5-5">
-         <label class="scenario-option" for="trust5-5">STRONGLY DISAGREE</label><br>
-        </div>
-       </div>
-      <div>
-      <button class="start-button">Next Page</button>
-      </div>
-    </form>
+       <input class="start-button" id="confirm" type="button" onclick="displayRadioValue()" style="display: block;" value="Confirm choice"><br>
+    </form>    
+    <div>
+        <p class="survey-paragraph" id="target" style="display: none;"></p>
+    </div>
+    <!-- Deontology Form -->
+    <div>
+        <form action="deontology1.php" method="POST">
+            <button class="start-button" id="deontology" style="display: none;">Next Page</button>
+            <input type="hidden" name="path1" value="deontology-path">
+            <input type="hidden" name="total" id="deon-score" value="">
+        </form>
+    </div>
+    <!-- Utilitarian Form -->
+    <div>
+        <form action="utilitarian1.php" method="POST">
+            <button class="start-button" id="utilitarian" style="display: none;">Next Page</button>
+            <input type="hidden" name="path1" value="utilitarian-path">
+            <input type="hidden" name="total" id="util-score" value="">
+        </form>
+    </div>
 </div>
 </main>
 </body>

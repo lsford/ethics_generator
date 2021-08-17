@@ -1,8 +1,12 @@
 <?php session_start(); ?>
 <?php 
-$_SESSION["T5"]=$_POST["T5"];//Likert 4 Variable
-$_SESSION["S5P1"]=$_POST["S5P1"];//S4P1 Variable
-$_SESSION["S5P2"]=$_POST["S5P2"];//S4P2 Variable
+$_SESSION["T10"]=$_POST["T10"];//Trust 1 Variable
+$_SESSION["T11"]=$_POST["T11"];//Trust 2 Variable
+$_SESSION["T12"]=$_POST["T12"];//Trust 3 Variable
+$_SESSION["T13"]=$_POST["T13"];//Trust 4 Variable
+$_SESSION["T14"]=$_POST["T14"];//Trust 5 Variable
+$_SESSION["T15"]=$_POST["T15"];//Trust 6 Variable
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
