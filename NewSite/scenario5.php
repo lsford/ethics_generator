@@ -3,18 +3,24 @@
 $_SESSION["T4"]=$_POST["T4"];//Likert 4 Variable
 $_SESSION["S4P1"]=$_POST["S4P1"];//S4P1 Variable
 $_SESSION["S4P2"]=$_POST["S4P2"];//S4P2 Variable
+$_SESSION["variable7"]=$_POST["variable7"];//Random variable 7
+$_SESSION["variable8"]=$_POST["variable8"];//Random variable 8
 
 include('connect.php'); //Database details
 $conn = connect(); //Connect to the database
 
-$scenarioNumber4 = $_POST['page_number4']; //Get the random number from the previous page
+$randomNumber1 = $_SESSION['number'][array_rand($_SESSION['number'])]; //Generate a random variable number
+$randomNumber2 = $_SESSION['number'][array_rand($_SESSION['number'])]; //Generate a random number for variable 1
 
-//Remove previous random number from array
-if (($key = array_search($scenarioNumber4, $_SESSION['scenario'])) !== false) {
-  unset($_SESSION['scenario'][$key]);
-}
+//Random variable 1
+$stmt = $conn->prepare("SELECT Dead FROM NumberDead WHERE RandomNumber=:randomNumber;"); //Randomly likert scenario 1
+$stmt->execute(['randomNumber' => $randomNumber1]);
+$variable9 = $stmt->fetch();
 
-$scenarioNumber5 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //Generate a random scenario
+//Random variable 2
+$stmt2 = $conn->prepare("SELECT Family FROM FamilyRelationships WHERE RandomNumber=:randomNumber;"); //Randomly likert scenario 1
+$stmt2->execute(['randomNumber' => $randomNumber2]);
+$variable10 = $stmt2->fetch();
 
 ?>
 <!DOCTYPE html>
@@ -61,12 +67,7 @@ $scenarioNumber5 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //G
     <form method="POST" action="demographic.php">
       <!--Likert Scenario 5-->
       <div id="trust5">
-        <p class="survey-paragraph">
-        <?php $stmt = $conn->prepare("SELECT Content FROM LikertScenarios WHERE ScenarioNumber=:scenarioNumber;"); //Randomly likert scenario 1
-            $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-            $LikertScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $LikertScenario["Content"]. "</p>";?>
-        </p>
+        <p class="survey-paragraph">You would trust an artificial intelligence with access to your private medical records</p>
         <div>
          <input type="radio" id="trust5-1" name="T5" value="T5-1" required>
            <label class="scenario-option" for="trust5-1">STRONGLY AGREE</label>
@@ -82,56 +83,30 @@ $scenarioNumber5 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //G
        </div>
       <!--Scenario 5 Part 1-->
     <div id="scenario13">
-        <P class="survey-paragraph">
-        <?php $stmt = $conn->prepare("SELECT BaseScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;");
-            $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-            $BaseScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $BaseScenario["BaseScenario"]. "</p>";?>
-        </P>
+        <P class="survey-paragraph">An artificial intelligence has been developed to support clinicians, by analysing data on current and previous patients and assigning treatment for mental health conditions or offering services that may be beneficial. Data provided to the artificial intelligence about a specific patient shows they have previously suffered with poor mental health, and data indicates similar individuals have greatly benefited from counselling sessions. However, appointments for these sessions are normally reserved for those currently suffering from severe mental health issues, and there are very few left available. The artificial intelligence responsible for making these decisions has two options:  </P>
         <input type="radio" id="scenario5-part1-utilitarian" name="S5P1" value="S5P1-UTILITARIAN" required></input>
-          <label class="scenario-option" for="scenario5-part1-utilitarian">
-          <?php $stmt = $conn->prepare("SELECT Content FROM BaseUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-              $BaseUtil = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $BaseUtil["Content"]. "</p>";?>
-          </label><br>
+          <label class="scenario-option" for="scenario5-part1-utilitarian">The artificial intelligence identifies the benefits to the specific patient and assigns them <?php echo $variable9['Dead']; ?> of the available counselling sessions, even though they are not currently being treated for a severe mental health condition</label><br>
         <input type="radio" id="scenario5-part1-deontology" name="S5P1" value="S5P1-DEONTOLOGY">
-          <label class="scenario-option" for="scenario5-part1-deontology" >
-          <?php $stmt = $conn->prepare("SELECT Content FROM BaseDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-              $BaseDeon = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $BaseDeon["Content"]. "</p>";?>
-          </label><br>
+          <label class="scenario-option" for="scenario5-part1-deontology" >The artificial intelligence does not assign the specific patient a counselling session, because they do not currently have a severe mental health condition. This will allow more counselling sessions to remain available for those who require them</label><br>
       </div>
       <div>
               <button id="s5p1-button" class="confirm-button" onclick="s5p1Lock()">Confirm Choice</button>
             </div>
       <!--Scenario 5 Part 2-->
       <div id="scenario14" style="display: none;">
-        <P class="survey-paragraph">
-        <?php $stmt = $conn->prepare("SELECT RelationshipScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;");
-            $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-            $RelaScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $RelaScenario["RelationshipScenario"]. "</p>";?>
-        </P>
+        <P class="survey-paragraph">Your relative has previously suffered from mental health conditions, and an artificial intelligence has identified that they might benefit from counselling sessions, as individuals currently suffering from similar conditions have greatly benefited from these sessions. However, appointments for these sessions are normally reserved for those currently suffering from severe mental health issues, and there are very few left available. The artificial intelligence responsible for making these decisions has two options:  </P>
         <input type="radio" id="scenario5-part2-utilitarian" name="S5P2" value="S5P2-UTILITARIAN"required></input>
-          <label class="scenario-option" for="scenario5-part2-utilitarian">
-          <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-              $RelaUtil = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $RelaUtil["Content"]. "</p>";?>
-          </label><br>
+          <label class="scenario-option" for="scenario5-part2-utilitarian">The artificial intelligence identifies the benefits to your <?php echo $variable10['Family']; ?>, and assigns them one of the available counselling sessions, even though they are not currently being treated for a severe mental health condition</label><br>
         <input type="radio" id="scenario5-part2-deontology" name="S5P2" value="S5P2-DEONTOLOGY">
-          <label class="scenario-option" for="scenario5-part2-deontology">
-          <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber5]);
-              $RelaDeon = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $RelaDeon["Content"]. "</p>";?>
-          </label><br>
+          <label class="scenario-option" for="scenario5-part2-deontology">The artificial intelligence does not assign your <?php echo $variable10['Family']; ?> a counselling session, because they are not currently being treated for a severe mental health condition. This will allow more counselling sessions to remain available for those who require them</label><br>
       </div>
       <div>
               <button id="s5p2-button" class="confirm-button" style="display: none;" onclick="s5p2Lock()">Confirm Choice</button>
             </div>
+            <div>
+          <input type="hidden" name="variable9" value="<?php echo $variable9['Age']; ?>" >
+          <input type="hidden" name="variable10" value="<?php echo $variable10['Family']; ?>" >
+      </div>
       <div>
       <button class="start-button" id="s5-submit" style="display: none;">Next Page</button>
       </div>

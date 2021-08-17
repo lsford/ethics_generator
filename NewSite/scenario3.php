@@ -3,18 +3,24 @@
 $_SESSION["T2"]=$_POST["T2"];//Likert 2 Variable
 $_SESSION["S2P1"]=$_POST["S2P1"];//S2P1 Variable
 $_SESSION["S2P2"]=$_POST["S2P2"];//S2P2 Variable
+$_SESSION["variable3"]=$_POST["variable3"];//Random variable 3
+$_SESSION["variable4"]=$_POST["variable4"];//Random variable 4
 
 include('connect.php'); //Database details
 $conn = connect(); //Connect to the database
 
-$scenarioNumber2 = $_POST['page_number2']; //Get the random number from the previous page
+$randomNumber1 = $_SESSION['number'][array_rand($_SESSION['number'])]; //Generate a random variable number
+$randomNumber2 = $_SESSION['number'][array_rand($_SESSION['number'])]; //Generate a random number for variable 1
 
-//Remove previous random number from array
-if (($key = array_search($scenarioNumber2, $_SESSION['scenario'])) !== false) {
-  unset($_SESSION['scenario'][$key]);
-}
+//Random variable 1
+$stmt = $conn->prepare("SELECT Age FROM PersonAge WHERE RandomNumber=:randomNumber;"); //Randomly likert scenario 1
+$stmt->execute(['randomNumber' => $randomNumber1]);
+$variable5 = $stmt->fetch();
 
-$scenarioNumber3 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //Generate a random scenario
+//Random variable 2
+$stmt2 = $conn->prepare("SELECT Family FROM FamilyRelationships WHERE RandomNumber=:randomNumber;"); //Randomly likert scenario 1
+$stmt2->execute(['randomNumber' => $randomNumber2]);
+$variable6 = $stmt2->fetch();
 
 ?>
 <!DOCTYPE html>
@@ -61,12 +67,7 @@ $scenarioNumber3 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //G
     <form method="POST" action="scenario4.php">
       <!--Likert Scenario 3-->
     <div id="trust3">
-        <p class="survey-paragraph">
-        <?php $stmt = $conn->prepare("SELECT Content FROM LikertScenarios WHERE ScenarioNumber=:scenarioNumber;"); //Randomly likert scenario 1
-            $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-            $LikertScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $LikertScenario["Content"]. "</p>";?>
-        </p>
+        <p class="survey-paragraph">You would trust an artificial intelligence to make prescription decisions </p>
         <div>
          <input type="radio" id="trust3-1" name="T3" value="T3-1" required>
            <label class="scenario-option" for="trust3-1">STRONGLY AGREE</label>
@@ -82,57 +83,30 @@ $scenarioNumber3 = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //G
        </div>
       <!--Scenario 3 Part 1-->
       <div id="scenario7">
-        <P class="survey-paragraph">
-          <?php $stmt = $conn->prepare("SELECT BaseScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;");
-            $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-            $BaseScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $BaseScenario["BaseScenario"]. "</p>";?>
-          </P>
+        <P class="survey-paragraph">An artificial intelligence has analysed data from the past 10 years and identified a trend suggesting an incoming flu pandemic. Unfortunately, there are not enough flu vaccines available to vaccinate everyone, so only people above 67 and below 18 are eligible to be vaccinated, as they are deemed to be most at risk. Two individuals, not eligible for the vaccine, visit their local GP to receive their flu vaccine. The patients explain that they own and work in a small shop and are extremely worried about catching the flu at work and becoming seriously ill. The artificial intelligence in-charge of deciding who the vaccine is given to produces two options: </P>
         <input type="radio" id="scenario3-part1-utilitarian" name="S3P1" value="S3P1-UTILITARIAN" required></input>
-          <label class="scenario-option" for="scenario3-part1-utilitarian">
-            <?php $stmt = $conn->prepare("SELECT Content FROM BaseUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-              $BaseUtil = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $BaseUtil["Content"]. "</p>";?>
-            </label><br>
+          <label class="scenario-option" for="scenario3-part1-utilitarian">The artificial intelligence decides to give the two <?php echo $variable5['Age']; ?>-year-old patients a flu vaccine, even though they are not eligible, as it means more people have been vaccinated against the flu</label><br>
         <input type="radio" id="scenario3-part1-deontology" name="S3P1" value="S3P1-DEONTOLOGY">
-          <label class="scenario-option" for="scenario3-part1-deontology">
-          <?php $stmt = $conn->prepare("SELECT Content FROM BaseDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-              $BaseDeon = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $BaseDeon["Content"]. "</p>";?>
-          </label><br>
+          <label class="scenario-option" for="scenario3-part1-deontology">The artificial intelligence decides not to give the two <?php echo $variable5['Age']; ?>-year-old patients the flu vaccine, to avoid running out of vaccines for those most at risk</label><br>
       </div>
       <div>
           <button id="s3p1-button" class="confirm-button" onclick="s3p1Lock()">Confirm Choice</button>
         </div>
       <!--Scenario 3 Part 2-->
       <div id="scenario8" style="display: none;">
-        <P class="survey-paragraph">
-        <?php $stmt = $conn->prepare("SELECT RelationshipScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;");
-            $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-            $RelaScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $RelaScenario["RelationshipScenario"]. "</p>";?>
-        </P>
+        <P class="survey-paragraph">You are related to the two individuals who are extremely worried about catching the flu at work and becoming seriously ill. The artificial intelligence in-charge of deciding who the vaccine is given to produces two options: </P>
         <input type="radio" id="scenario3-part2-utilitarian" name="S3P2" value="S3P2-UTILITARIAN"required></input>
-          <label class="scenario-option" for="scenario3-part2-utilitarian">
-          <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-              $RelaUtil = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $RelaUtil["Content"]. "</p>";?>
-          </label><br>
+          <label class="scenario-option" for="scenario3-part2-utilitarian">The artificial intelligence decides to give your <?php echo $variable6['Family']; ?> a flu vaccine, even though they are not eligible</label><br>
         <input type="radio" id="scenario3-part2-deontology" name="S3P2" value="S3P2-DEONTOLOGY">
-          <label class="scenario-option" for="scenario3-part2-deontology">
-            <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;");
-              $stmt->execute(['scenarioNumber' => $scenarioNumber3]);
-              $RelaDeon = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $RelaDeon["Content"]. "</p>";?>
-              </label><br>
+          <label class="scenario-option" for="scenario3-part2-deontology">The artificial intelligence decides not to give your <?php echo $variable6['Family']; ?> the flu vaccine, as they are not eligible, to avoid running out of vaccines for those most at risk</label><br>
       </div>
       <div>
               <button id="s3p2-button" class="confirm-button" style="display: none;" onclick="s3p2Lock()">Confirm Choice</button>
             </div>
-            <input type="hidden" name="page_number3" value="<?php echo $scenarioNumber3;?>"/>
+      <div>
+          <input type="hidden" name="variable5" value="<?php echo $variable5['Age']; ?>" >
+          <input type="hidden" name="variable6" value="<?php echo $variable6['Family']; ?>" >
+      </div>
       <div>
         <button class="start-button" id="s3-submit" style="display: none;">Next Page</button>
       </div>

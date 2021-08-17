@@ -1,14 +1,28 @@
 <?php session_start(); ?>
 <?php
+$_SESSION["L1"]=$_POST["L1"];//Likert 1 Variable
+$_SESSION["L2"]=$_POST["L2"];//Likert 2 Variable
+$_SESSION["L3"]=$_POST["L3"];//Likert 3 Variable
 
-$scenario = Array(1,2,3,4,5); //Create array with scenario numbers
+$number = Array(1,2,3,4,5); //Create array with scenario numbers
 
-$_SESSION['scenario'] = $scenario; //Turn array into session variable to allow access across all pages
+$_SESSION['number'] = $number; //Turn array into session variable to allow access across all pages
 
-$scenarioNumber = $_SESSION['scenario'][array_rand($_SESSION['scenario'])]; //Generate a random scenario
+$randomNumber1 = $_SESSION['number'][array_rand($_SESSION['number'])]; //Generate a random number for variable 1
+$randomNumber2 = $_SESSION['number'][array_rand($_SESSION['number'])]; //Generate a random number for variable 1
 
 include('connect.php'); //Database details
 $conn = connect(); //Connect to the database
+
+//Random variable 1
+$stmt = $conn->prepare("SELECT Dead FROM NumberDead WHERE RandomNumber=:randomNumber;"); //Randomly likert scenario 1
+$stmt->execute(['randomNumber' => $randomNumber1]);
+$variable1 = $stmt->fetch();
+
+//Random variable 2
+$stmt2 = $conn->prepare("SELECT Family FROM FamilyRelationships WHERE RandomNumber=:randomNumber;"); //Randomly likert scenario 1
+$stmt2->execute(['randomNumber' => $randomNumber2]);
+$variable2 = $stmt2->fetch();
 
 ?>
 <!DOCTYPE html>
@@ -57,12 +71,7 @@ $conn = connect(); //Connect to the database
         <form method="POST" action="scenario2.php">
           <!--Likert Question-->
         <div id="trust1">
-          <p class="survey-paragraph">
-          <?php $stmt = $conn->prepare("SELECT Content FROM LikertScenarios WHERE ScenarioNumber=:scenarioNumber;"); //Randomly likert scenario 1
-            $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-            $LikertScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $LikertScenario["Content"]. "</p>";?>
-          </p>
+          <p class="survey-paragraph">You would trust an artificial intelligence to make surgical decisions for you</p>
           <div>
            <input type="radio" id="trust1-1" name="T1" value="T1-1" required>
              <label class="scenario-option" for="trust1-1">STRONGLY AGREE</label>
@@ -77,57 +86,30 @@ $conn = connect(); //Connect to the database
           </div>
         </div>   
         <!--SCENARIO 1 Part 1-->
-          <p class="survey-paragraph">
-            <?php $stmt = $conn->prepare("SELECT BaseScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;"); //Randomly generated base scenario 1
-            $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-            $BaseScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $BaseScenario["BaseScenario"]. "</p>";?>
-          </p>
+          <p class="survey-paragraph">There has been a car accident involving a bus full of passengers and a small vehicle. The accident has resulted in several people being severely injured, and without surgery they will die. Some of the bus passengers require organ transplants, whilst those in the small vehicle only require surgery. The artificial intelligence responsible for making the decision has produced two options: </p>
           <div>
             <input type="radio" id="scenario1-part1-utilitarian" name="S1P1" value="S1P1-UTILITARIAN"required>
-            <label class="scenario-option" for="scenario1-part1-utilitarian">
-              <?php $stmt = $conn->prepare("SELECT Content FROM BaseUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;"); //Utilitarian option for base scenario 1
-              $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-              $BaseUtil = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $BaseUtil["Content"]. "</p>";?>
-            </label><br>
+            <label class="scenario-option" for="scenario1-part1-utilitarian">The artificial intelligence has decided one of the people in the small vehicle should donate their organs to save the lives of <?php echo $variable1['Dead']; ?> bus passengers who require organ transplants to survive</label><br>
             <input type="radio" id="scenario1-part1-deontology" name="S1P1" value="S1P1-DEONTOLOGY">
-            <label class="scenario-option" for="scenario1-part1-deontology">
-              <?php $stmt = $conn->prepare("SELECT Content FROM BaseDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;"); //Deontology option for base scenario 1
-              $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-              $BaseDeon = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $BaseDeon["Content"]. "</p>";?>
-            </label><br>
+            <label class="scenario-option" for="scenario1-part1-deontology">The artificial intelligence has decided the one small vehicle passenger should receive surgery and not donate their organs to the <?php echo $variable1['Dead']; ?> bus passengers</label><br>
           </div>
             <div>
               <button id="s1p1-button" class="confirm-button" onclick="s1p1Lock()">Confirm Choice</button>
             </div>
         <!--Scenario1 Part 2-->
           <div id="scenario2" style="display: none;">
-            <p class="survey-paragraph">
-              <?php $stmt = $conn->prepare("SELECT RelationshipScenario FROM HITScenarios WHERE ScenarioNumber=:scenarioNumber;"); //Randomly generated relationship scenario
-            $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-            $RelaScenario = $stmt->fetch(); 
-            echo "<p class='survey-paragraph'>" . $RelaScenario["RelationshipScenario"]. "</p>";?>
-            </p>
+            <p class="survey-paragraph">Your local hospital contacts you to inform you that you are related to one of the people in the small vehicle, and that they are severely injured. When you get to the hospital you are informed that your relative’s organs could be donated to save some of the injured bus passengers. Which of the two options should the artificial intelligence select: </p>
             <input type="radio" id="scenario1-part2-utilitarian" name="S1P2" value="S1P2-UTILITARIAN" required>
-            <label class="scenario-option" for="scenario1-part2-utilitarian">
-              <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipUtilitarianOptions WHERE ScenarioNumber=:scenarioNumber;"); //Utilitarian option for relationship scenario 1
-              $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-              $RelaUtil = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $RelaUtil["Content"]. "</p>";?>
-            </label><br>
+            <label class="scenario-option" for="scenario1-part2-utilitarian">The artificial intelligence decides the organs of your <?php echo $variable2['Family']; ?> should be used to save the lives of the injured bus passengers</label><br>
             <input type="radio" id="scenario1-part2-deontology" name="S1P2" value="S1P2-DEONTOLOGY">
-            <label class="scenario-option" for="scenario1-part2-deontology">
-            <?php $stmt = $conn->prepare("SELECT Content FROM RelationshipDeontologyOptions WHERE ScenarioNumber=:scenarioNumber;"); //Deontology option for relationship scenario 1
-              $stmt->execute(['scenarioNumber' => $scenarioNumber]);
-              $RelaDeon = $stmt->fetch(); 
-              echo "<p class='survey-paragraph'>" . $RelaDeon["Content"]. "</p>";?>
-            </label><br>
-            <input type="hidden" name="page_number" value="<?php echo $scenarioNumber;?>"/>
+            <label class="scenario-option" for="scenario1-part2-deontology">The artificial intelligence decides the organs of your <?php echo $variable2['Family']; ?> should not be used to save the lives of the injured bus passengers</label><br>
           </div>
           <div>
             <button id="s1p2-button" class="confirm-button" style="display: none;" onclick="s1p2Lock()">Confirm Choice</button>
+          </div>
+          <div>
+            <input type="hidden" name="variable1" value="<?php echo $variable1['Dead']; ?>" >
+            <input type="hidden" name="variable2" value="<?php echo $variable1['Family']; ?>" >
           </div>
           <div>
             <button class="start-button" id="s1-submit" style="display: none;">Next Page</button>
