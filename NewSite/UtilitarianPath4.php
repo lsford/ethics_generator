@@ -84,7 +84,7 @@ $variable13 = $stmt13->fetch();
     <form method="POST" action="exlikert.php">
           <!--Single Stage-->
     <div id="example13">
-                <P class="survey-paragraph">4. During a marathon race a self-driving medic car has dropped two doctors at a collapsed runner, however the doctor accidentally initiates emergency mode, and the car starts to drive off quickly. The main pack of the marathon is approaching around the corner once the car turns the corner it will be going too fast to avoid either the massive tight grouping of athletes or the tight grouping of spectators at the side. Which would be the right decision for the car to take?</p>
+                <P class="survey-paragraph">4. During a marathon race a self-driving medic car has dropped two doctors at a collapsed runner. However, the doctor accidentally initiates emergency mode, and the car starts to drive off quickly. The main pack of the marathon is approaching around the corner. Once the car turns the corner it will be going too fast to avoid either the massive tight grouping of athletes or the tight grouping of spectators at the side. Which would be the right decision for the car to take?</p>
                 <input type="radio" id="example4-stage1-utilitarian-ni" name="E4S1" value="U-E4S1-UTILITARIAN-ni" onclick="submitExamples4()" required></input>
                   <label class="example-option" for="example4-stage1-utilitarian-ni" onclick="submitExamples4()" >Swerve off road into the spectators avoiding the pack of athletes (Injuring <?php echo $variable11["Dead"];?>, killing <?php echo $variable10["Dead"];?>) </label><br>
                 <input type="radio" id="example4-stage1-deontology-i" name="E4S1" value="U-E4S1-DEONTOLOGY-i" onclick="submitExamples4()">

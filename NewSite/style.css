@@ -414,7 +414,7 @@ nav li {
 /*Radio button*/
 input[type="radio"] {
   margin-left: 2rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   float: left;
 }
 
@@ -424,6 +424,7 @@ label {
   font-size: 2rem;
   justify-content: center;
   margin-left: 3rem;
+  margin-right: 1rem;
   display: block;
 }
 

@@ -54,7 +54,7 @@ $variable3 = $stmt3->fetch();
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
                 <li><a href="index.html">Home</a></li>
-          <li><a href="scenarios.html">examples</a></li>
+          <li><a href="scenarios.html">Scenarios</a></li>
           <li><a href="about.html">About</a></li>
               </ul>
               <div class="clear"></div>
@@ -79,19 +79,19 @@ $variable3 = $stmt3->fetch();
             <div id="cdss-container">
               <form method="POST" action="UtilitarianPath2.php">
                 <!--example 1 stage 1-->
-                <p class="survey-paragraph">1.1) A full coach of passengers is driving down a quiet road when an unidentified van with <?php echo $variable1["Dead"];?> passengers drives quickly around the corner. The coach driver is then presented with two options. The first option is continuing onwards but into the van, the best option at preserving all life on the coach but would kill all on board the van. The second option is swerve suddenly off the road into the verge which would threaten the life of everyone on board the coach but save those which are in the van. Should the coach driver?</p>
+                <p class="survey-paragraph">1.1) A full coach of passengers is driving down a quiet road when an unidentified van, with <?php echo $variable1["Dead"];?> passengers, drives quickly around the corner. The coach driver is then presented with two options. The first option is continuing onwards, but into the van, preserving all life on the coach killing all on board the van. The second option is swerve suddenly off the road into the verge which would threaten the life of everyone on board the coach but save those in the van. Should the coach driver:</p>
                 <div>
                   <input type="radio" id="example1-stage1-utilitarian-ni" name="E1S1" value="U-E1S1-UTILITARIAN-ni"required>
                   <label class="example-option" for="example1-stage1-utilitarian-ni">Continue Present Course (Saving <?php echo $variable2["Dead"]; ?> in Coach, Killing <?php echo $variable1["Dead"]; ?> in van)  </label><br>
                   <input type="radio" id="example1-stage1-deontology-i" name="E1S1" value="U-E1S1-DEONTOLOGY-i">
-                  <label class="example-option" for="example1-stage1-deontology-i">Make the intervention to avoid the ambulance (Killing <?php echo $variable2["Dead"]; ?> in the coach, saving <?php echo $variable1["Dead"]; ?> in van) </label><br>
+                  <label class="example-option" for="example1-stage1-deontology-i">Make the intervention to avoid the van (Killing <?php echo $variable2["Dead"]; ?> in the coach, saving <?php echo $variable1["Dead"]; ?> in van) </label><br>
                 </div>
                   <div>
                     <button id="e1s1-button" class="confirm-button" onclick="e1s1Lock()">Confirm Choice</button>
                   </div>
                 <!--example 1 stage 2-->
                 <div id="example2" style="display: none;">
-                  <p class="survey-paragraph">1.2) More is revealed about the coach incident. The coach is controlled by an AI driver and the van driving quickly is an ambulance responding to an emergency the two responses of the driver are the same. Should the coach? </p>
+                  <p class="survey-paragraph">1.2) More is revealed about the coach incident. The coach is controlled by an AI driver and the van driving quickly is an ambulance responding to an emergency. The two responses of the coach are the same. Should the coach: </p>
                   <input type="radio" id="example1-stage2-utilitarian-ni" name="E1S2" value="U-E1S2-UTILITARIAN-ni"required>
                   <label class="example-option" for="example1-stage2-utilitarian-ni">Continue Present Course (Saving <?php echo $variable2["Dead"]; ?> in Coach, Killing <?php echo $variable1["Dead"]; ?> in ambulance)  </label><br>
                   <input type="radio" id="example1-stage2-deontology-i" name="E1S2" value="U-E1S2-DEONTOLOGY-i">
@@ -99,12 +99,12 @@ $variable3 = $stmt3->fetch();
                 </div>
                 <div>
                   <button id="e1s2-button" class="confirm-button" style="display: none;" onclick="e1s2Lock()">Confirm Choice</button>
-                </div>-
+                </div>
                <!--example 1 stage 3-->
               <div id="example3" style="display: none;">
-                <p class="survey-paragraph">1.3) The final piece of information is revealed the emergency the ambulance is responding to is one which involves your <?php echo $variable3["Family"];?> if the ambulance does not get there they will die. If in the last step you chose to preserve the live of all in the coach, do you change your mind because of this information. </p>
+                <p class="survey-paragraph">1.3) The final piece of information is revealed. The emergency the ambulance is responding to is one which involves your <?php echo $variable3["Family"];?>. If the ambulance does not get there, they will die. If in the last step you chose to preserve the live of all in the coach, do you change your mind because of this information? </p>
                 <input type="radio" id="example1-stage3-UTILITARIAN-ni" name="E1S3" value="U-E1S3-UTILITARIAN-ni" onclick="submitExamples1()"required>
-                  <label class="example-option" for="example1-stage3-UTILITARIAN-ni" onclick="submitExamples1()">Continue Present Course (Saving <?php echo $variable2["Dead"]; ?> in Coach, Killing <?php echo $variable1["Dead"]; ?> in ambulance + your <?php echo $variable3["Family"];?>)  </label><br>
+                  <label class="example-option" for="example1-stage3-UTILITARIAN-ni" onclick="submitExamples1()">Continue Present Course (Saving <?php echo $variable2["Dead"]; ?> in Coach, Killing <?php echo $variable1["Dead"]; ?> in ambulance and your <?php echo $variable3["Family"];?>)  </label><br>
                 <input type="radio" id="example1-stage3-DEONTOLOGY-i" name="E1S3" value="U-E1S3-DEONTOLOGY-i" onclick="submitExamples1()">
                   <label class="example-option" for="example1-stage3-DEONTOLOGY-i" onclick="submitExamples1()">Make the intervention to avoid the ambulance (Killing <?php echo $variable2["Dead"]; ?> in coach, saving <?php echo $variable1["Dead"]; ?> in ambulance and your <?php echo $variable3["Family"];?>)     </label><br>
             <input type="hidden" name="variable1" value="<?php echo $variable1["Dead"];?>"/>

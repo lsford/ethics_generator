@@ -49,7 +49,7 @@ $_SESSION["variable6"]=$_POST["variable6"];// Variable
 <div id="cdss-container">
 <form method="POST" action="#">
         <div id="likert4">
-          <p class="survey-paragraph">1. Pedestrians’ lives should be preserved over those in the vehicle (U)     </p>
+          <p class="survey-paragraph">1. Pedestrians’ lives should be preserved over those in the vehicle      </p>
           <div>
            <input class="likert2" type="radio" id="OPTION-7" name="L4" value="1" required>
              <label class="scenario-option" for="OPTION-7">AGREE</label>
@@ -59,7 +59,7 @@ $_SESSION["variable6"]=$_POST["variable6"];// Variable
         </div> 
       <!--Likert 2-->
       <div id="likert5">
-        <p class="survey-paragraph">2. The lives of children should be preserved even if more casualties result from saving them. (D)       </p>
+        <p class="survey-paragraph">2. The lives of children should be preserved even if more casualties result from saving them.       </p>
         <div>
          <input class="likert2" type="radio" id="OPTION-9" name="L5" value="0" required>
            <label class="scenario-option" for="OPTION-9">AGREE</label>
@@ -69,7 +69,7 @@ $_SESSION["variable6"]=$_POST["variable6"];// Variable
        </div>
       <!--Likert 3-->
       <div id="likert6">
-        <p class="survey-paragraph">3. My view on which party should be saved would be affected if I was involved. (D)             </p>
+        <p class="survey-paragraph">3. My view on which party should be saved would be affected if I was involved.         </p>
         <div>
          <input class="likert2" type="radio" id="OPTION-11" name="L6" value="0" required>
            <label class="scenario-option" for="OPTION-11">AGREE</label>
@@ -84,14 +84,14 @@ $_SESSION["variable6"]=$_POST["variable6"];// Variable
     </div>
     <div>
         <form action="UtilitarianPath3.php" method="POST">
-            <button class="start-button" id="deontology2" style="display: none;">Next Page (U)</button>
+            <button class="start-button" id="deontology2" style="display: none;">Next Page </button>
             <input type="hidden" name="path2" value="deontology-path">
             <input type="hidden" name="total2" id="deon-score2" value="">
         </form>
     </div>
     <div>
         <form action="DeontologyPath3.php" method="POST">
-            <button class="start-button" id="utilitarian2" style="display: none;">Next Page (D)</button>
+            <button class="start-button" id="utilitarian2" style="display: none;">Next Page </button>
             <input type="hidden" name="path2" value="utilitarian-path">
             <input type="hidden" name="total2" id="util-score2" value="">
             

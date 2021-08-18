@@ -79,7 +79,7 @@ $variable6 = $stmt6->fetch();
     <form method="POST" action="likertbridge2.php">
          <!--example 3-->
          <div id="example4">
-           <P class="survey-paragraph">2.1) A self-driving people carrier full of <?php echo $variable5["Dead"];?> passengers is approaching a corner when some people start to cross the road and the brakes of the vehicle fail, knowing that it will not be able to stop or slow down before the crossing people the alternative for the carrier  is to swerve around the pedestrians but into a large, parked cement mixer resulting in the fatalities of those in the carrier . Should the carrier ?  </P>
+           <P class="survey-paragraph">2.1) A self-driving people carrier full of <?php echo $variable5["Dead"];?> passengers is, approaching a corner when some people start to cross the road and the brakes of the vehicle fail. Knowing that it will not be able to stop or slow down before the crossing people, the alternative for the carrier  is to swerve around the pedestrians into a large, parked cement mixer resulting in the fatalities of those in the carrier . Should the carrier:  </P>
            <input type="radio" id="example2-stage1-utilitarian-ni" name="E2S1" value="U-E2S1-UTILITARIAN-ni"required></input>
              <label class="example-option" for="example2-stage1-utilitarian-ni">Continue present course (saves <?php echo $variable5["Dead"];?> in carrier , kill <?php echo $variable4["Dead"]; ?> pedestrians)    </label><br>
            <input type="radio" id="example2-stage1-deontology-i" name="E2S1" value="U-E2S1-DEONTOLOGY-i">
@@ -90,7 +90,7 @@ $variable6 = $stmt6->fetch();
         </div>
         <!-- Part 2 -->
         <div id="example5" style="display: none;">
-          <P class="survey-paragraph">2.2) Another piece of information is revealed. The pedestrians which have entered the road are school children running into the road to retrieve their ball while another is their parent attempting to pull them back. Does this change your opinion on which should be saved? Should the carrier ?  </p>
+          <P class="survey-paragraph">2.2) Another piece of information is revealed. The pedestrians who have entered the road, are school children running to retrieve their ball while another is their parent attempting to pull them back. Does this change your opinion on who should be saved? Should the carrier: </p>
           <input type="radio" id="example2-stage2-utilitarian-ni" name="E2S2" value="U-E2S2-UTILITARIAN-ni"required></input>
             <label class="example-option" for="example2-stage2-utilitarian-ni">Continue present course (saves <?php echo $variable5["Dead"];?> in carrier , kill <?php echo $variable4["Dead"]; ?> pedestrians)     </label><br>
           <input type="radio" id="example2-stage2-deontology-i" name="E2S2" value="U-E2S2-DEONTOLOGY-i">
@@ -101,7 +101,7 @@ $variable6 = $stmt6->fetch();
         </div>
         <!-- Part 3 -->
         <div id="example6" style="display: none;">
-          <P class="survey-paragraph">2.3) The final piece of information is revealed, the carrier is driving to a wedding with you and your <?php echo $variable6["Family"];?>onboard, when the children and parent step into the road. If you chose to avoid the pedestrians in step 2 does this affect your choice?  </p>
+          <P class="survey-paragraph">2.3) The final piece of information is revealed. The carrier is driving to a wedding, with you and your <?php echo $variable6["Family"];?> onboard, when the children and parent step into the road. If you chose to avoid the pedestrians in step 2 does this affect your choice?  </p>
           <input type="radio" id="example2-stage3-utilitarian-ni" name="E2S3" value="U-E2S3-UTILITARIAN-ni" onclick="submitExamples2()"required></input>
             <label class="example-option" for="example2-stage3-utilitarian-ni" onclick="submitExamples2()">Continue present course (saves <?php echo $variable5["Dead"];?> in carrier , kills <?php echo $variable4["Dead"]; ?> pedestrians)     </label><br>
            <input type="radio" id="example2-stage3-deontology-i" name="E2S3" value="U-E2S3-DEONTOLOGY-i" onclick="submitExamples2()">

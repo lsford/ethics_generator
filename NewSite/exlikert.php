@@ -49,7 +49,7 @@ $_SESSION["variable13"]=$_POST["variable13"];// Variable
   <h3 id="title-cdss">Autonomous Car Survey</h3>
 <div id="cdss-container">
     <form method="POST" action="cardemographics.php">
-      <div id="line">   
+         
         <!--likert 1-->
                   <div id="likert1">
                   <p class="survey-paragraph">1. It is important to apply ethics to self-driving cars</p>

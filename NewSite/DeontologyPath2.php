@@ -77,9 +77,9 @@ $variable6 = $stmt6->fetch();
     <form method="POST" action="likertbridge2.php">
       <!--example 2-->
         <div id="example4">
-            <p class="survey-paragraph"> 2.1) In 2033, a capacity full self-driving bus is driving safely down a lane, when a coach driven by a human full of passengers drives around the corner. An accident is inevitable, if the self-driving bus continues the human driver in the other bus will be forced to swerve killing all passengers on board whilst saving the life of those on the prison bus. Should the self-driving bus? </p>
+            <p class="survey-paragraph"> 2.1) In 2033, a capacity full self-driving bus is driving safely down a lane, when a coach driven by a human full of passengers drives around the corner. An accident is inevitable, if the self-driving bus continues the human driver in the other bus will be forced to swerve killing all passengers on board whilst saving the life of those on the self-driving bus. Should the self-driving bus? </p>
             <input type="radio" id="example2-stage1-utilitarian-ni" name="E2S1" value="D-E2S1-UTILITARIAN-ni"required>
-                <label class="example-option" for="example2-stage1-utilitarian-ni">Continue present course (saves <?php echo $variable5["Dead"]; ?> in self driven bus, kills <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
+                <label class="example-option" for="example2-stage1-utilitarian-ni">Continue on present course (saves <?php echo $variable5["Dead"]; ?> in self driven bus, kills <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
             <input type="radio" id="example2-stage1-deontology-i" name="E2S1" value="D-E2S1-DEONTOLOGY-i">
               <label class="example-option" for="example2-stage1-deontology-i">Intervene avoiding the human driven bus (Killing <?php echo $variable5["Dead"]; ?> in self driven bus, saving <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
         </div> 
@@ -88,22 +88,22 @@ $variable6 = $stmt6->fetch();
         </div>
         <!--Part 2 -->
         <div id="example5" style="display: none;">
-          <p class="survey-paragraph">2.2) More is revealed about the buses. The self-driven bus is a prototype criminal processing vehicle, and the vehicle contains both innocent prison staff and prisoners of unknown guilt status or crime. The passengers in the human driven vehicle are on their way to a stag do and there is the possibility the human driver is intoxicated the human driven bus is at fault as it has drifted into the other lane. Should the self-driving bus?</p>
+          <p class="survey-paragraph">2.2) More is revealed about the buses. The self-driven bus is a prototype criminal processing vehicle, and the vehicle contains both innocent prison staff and prisoners of unknown guilt status or crime. The passengers in the human driven vehicle are on their way to a stag do and there is the possibility the human driver is intoxicated. The human driven bus is at fault for the crash as it has drifted into the other lane. Should the self-driving bus:</p>
           <input type="radio" id="example2-stage2-utilitarian-ni" name="E2S2" value="D-E2S2-UTILITARIAN-ni"required>
-          <label class="example-option" for="example2-stage2-utilitarian-ni">Continue present course (saves <?php echo $variable5["Dead"]; ?> in self driven bus, kills <?php echo $variable4["Dead"]; ?> in human driven bus)      </label><br>
+          <label class="example-option" for="example2-stage2-utilitarian-ni">Continue on present course (saves <?php echo $variable5["Dead"]; ?> in self driven bus, kills <?php echo $variable4["Dead"]; ?> in the human driven bus)      </label><br>
           <input type="radio" id="example2-stage2-deontology-i" name="E2S2" value="D-E2S2-DEONTOLOGY-i">
-          <label class="example-option" for="example2-stage2-deontology-i" >Intervene avoiding the human driven bus (Killing <?php echo $variable5["Dead"]; ?> in self driven bus, saving <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
+          <label class="example-option" for="example2-stage2-deontology-i" >Intervene by avoiding the human driven bus (Killing <?php echo $variable5["Dead"]; ?> in self driven bus, saving <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
          </div>
          <div> 
              <button id="e2s2-button" class="confirm-button" style="display: none;" onclick="e2s2Lock()">Confirm Choice</button>
          </div> 
          <!--Part 3 --> 
               <div id="example6" style="display: none;">
-                <P class="survey-paragraph">2.3) Finally you find yourself teleported into the human driven party bus and are involved in the revelry. The same scenario occurs the protype prison bus drives legally around the corner and the party bus drifts into the road, if the prison bus continues it will kill all the passengers in the party bus. Despite being at fault for the impending crash does being onboard the bus make you change your mind (if you chose to option A for part 2)? Or should the prison bus swerve off the road killing all on board? </p>
+                <P class="survey-paragraph">2.3) Finally, you find yourself teleported into the human driven party bus and are involved in the revelry. The same scenario occurs the prototype prison bus drives legally around the corner and the party bus drifts into the road. If the prison bus continues it will kill all the passengers in the party bus including yourself. Despite being at fault for the impending crash, does being onboard the bus make you change your mind (if you chose option A for part 2)? Or should the prison bus swerve off the road killing all on board? </p>
                 <input type="radio" id="example2-stage3-UTILITARIAN-ni" name="E2S3" value="D-E2S3-UTILITARIAN-ni" onclick="submitExamples2()"required></input>
-                  <label class="example-option" for="example2-stage3-utilitarian-ni" onclick="submitExamples2()">Continue present course (saves <?php echo $variable5["Dead"]; ?> in self driven bus, kills <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
+                  <label class="example-option" for="example2-stage3-utilitarian-ni" onclick="submitExamples2()">Continue on present course (saves <?php echo $variable5["Dead"]; ?> in self driven bus, kills <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
                 <input type="radio" id="example2-stage3-DEONTOLOGY-i" name="E2S3" value="D-E2S3-DEONTOLOGY-i" onclick="submitExamples2()">
-                  <label class="example-option" for="example2-stage3-deontology-i" onclick="submitExamples2()">Intervene avoiding the human driven bus (Killing <?php echo $variable5["Dead"]; ?> in self driven bus, saving <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
+                  <label class="example-option" for="example2-stage3-deontology-i" onclick="submitExamples2()">Intervene by avoiding the human driven bus (Killing <?php echo $variable5["Dead"]; ?> in self driven bus, saving <?php echo $variable4["Dead"]; ?> in human driven bus)     </label><br>
             <input type="hidden" name="variable4" value="<?php echo $variable4["Dead"];?>"/>
             <input type="hidden" name="variable5" value="<?php echo $variable5["Dead"];?>"/>
             <input type="hidden" name="variable6" value="<?php echo $variable6["Family"];?>"/>

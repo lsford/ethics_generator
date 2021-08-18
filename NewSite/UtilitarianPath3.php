@@ -79,7 +79,7 @@ $variable9 = $stmt9->fetch();
     <form method="POST" action="UtilitarianPath4.php">
           <!--Single Stage-->
     <div id="example13">
-                <P class="survey-paragraph">3. A jack-knifed truck—should it hit the truck and kill its own driver, or should it swerve onto a crowded pavement and kill pedestrians? A human driver might react randomly (if they have time to react at all), but the response of an autonomous vehicle would have to be programmed ahead of time. What should we tell the car to do?</p>
+                <P class="survey-paragraph">3. A self driving car has turned a corner and a jack-knifed truck has blocked the road. Should the car hit the truck and kill its own driver, or should it swerve onto a crowded pavement and kill pedestrians? A human driver might react randomly (if they have time to react at all), but the response of an autonomous vehicle would have to be programmed ahead of time. What should we tell the car to do?</p>
                 <input type="radio" id="example3-stage1-utilitarian-ni" name="E3S1" value="U-E3S1-UTILITARIAN-ni" onclick="submitExamples3()" required></input>
                   <label class="example-option" for="example3-stage1-utilitarian-ni" onclick="submitExamples3()" > Continue present course crashing itself and killing the driver</label><br>
                 <input type="radio" id="example3-stage1-deontology-i" name="E3S1" value="U-E3S1-DEONTOLOGY-i" onclick="submitExamples3()">

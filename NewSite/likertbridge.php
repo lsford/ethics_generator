@@ -43,7 +43,7 @@
 <div id="cdss-container">
 <form method="POST" action="#">
         <div id="likert1">
-          <p class="survey-paragraph">1. The action is always morally correct if the consequences produce more happiness than harm (Act Util)          </p>
+          <p class="survey-paragraph">1. The action is always morally correct if the consequences produce more happiness than harm        </p>
           <div>
            <input class="likert" type="radio" id="OPTION-1" name="L1" value="1" required>
              <label class="scenario-option" for="OPTION-1">AGREE</label>
@@ -53,7 +53,7 @@
         </div> 
       <!--Likert 2-->
       <div id="likert2">
-        <p class="survey-paragraph">2. Morality is the matter of duty, whether something is right or wrong does not depend on the consequence but on whether the action is right or wrong. (Deon)            </p>
+        <p class="survey-paragraph">2. Morality is the matter of duty, whether something is right or wrong does not depend on the consequence but on whether the action is right or wrong.            </p>
         <div>
          <input class="likert" type="radio" id="OPTION-3" name="L2" value="0" required>
            <label class="scenario-option" for="OPTION-3">AGREE</label>
@@ -63,7 +63,7 @@
        </div>
       <!--Likert 3-->
       <div id="likert3">
-        <p class="survey-paragraph">3. An action is morally right if it conforms to the rules which lead to the greatest good or happiness, but rules must always be followed. (Rule Util)            </p>
+        <p class="survey-paragraph">3. An action is morally right if it conforms to the rules which lead to the greatest good or happiness, but rules must always be followed.             </p>
         <div>
          <input class="likert" type="radio" id="OPTION-5" name="L3" value="1" required>
            <label class="scenario-option" for="OPTION-5">AGREE</label>
@@ -78,14 +78,14 @@
     </div>
     <div>
         <form action="DeontologyPath1.php" method="POST">
-            <button class="start-button" id="deontology" style="display: none;">Next Page (D)</button>
+            <button class="start-button" id="deontology" style="display: none;">Next Page </button>
             <input type="hidden" name="path1" value="deontology-path">
             <input type="hidden" name="total" id="deon-score" value="">
         </form>
     </div>
     <div>
         <form action="UtilitarianPath1.php" method="POST">
-            <button class="start-button" id="utilitarian" style="display: none;">Next Page (U)</button>
+            <button class="start-button" id="utilitarian" style="display: none;">Next Page </button>
             <input type="hidden" name="path1" value="utilitarian-path">
             <input type="hidden" name="total" id="util-score" value="">
 

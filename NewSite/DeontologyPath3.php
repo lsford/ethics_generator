@@ -67,20 +67,16 @@ $variable9 = $stmt9->fetch();
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
   </div>
   <h3 id="title-cdss">Example 3</h3>
-  <p id="description">These examples are slighlty different from what you have just completed rather than 3 parts these three questions are single staged.</p>
+  <p id="description">These examples are slighlty different from what you have just completed, rather than 3 parts these three questions are single staged.</p>
     <div id="cdss-container">
         <form method="POST" action="DeontologyPath4.php">
           <!--Single Stage-->
           <div id="example13">
-            <P class="survey-paragraph">3) You are in a self-driving car with two passengers and your <?php echo $variable9["Family"];?> that is driving down a narrow country road. As it drives around a corner there are a family of <?php echo $variable7["Dead"];?> people on a walk with their dog in the road. What should we tell the car to do?</p>
+            <P class="survey-paragraph">3) You are in a self-driving car with your <?php echo $variable9["Family"];?> as well as two further passengers driving down a narrow country road. As it drives around a corner there are a family of <?php echo $variable7["Dead"];?> people on a walk with their dog standing in the road. What should the car to do?</p>
                 <input type="radio" id="example3-stage1-utilitarian-ni" name="E3S1" value="D-E3S1-UTILITARIAN-ni" onclick="submitExamples3()" required></input>
-                  <label class="example-option" for="example3-stage1-utilitarian-ni" onclick="submitExamples3()"> Swerve off the road avoiding the pedestrians but kill all those in the car including yourself and your <?php echo $variable9["Family"];?></label><br>
+                  <label class="example-option" for="example3-stage1-utilitarian-ni" onclick="submitExamples3()"> Swerve off the road avoiding the pedestrians but critically injure all those in the car including yourself and your <?php echo $variable9["Family"];?></label><br>
                 <input type="radio" id="example3-stage1-deontology-i" name="E3S1" value="D-E3S1-DEONTOLOGY-i" onclick="submitExamples3()">
                   <label class="example-option" for="example3-stage1-deontology-i" onclick="submitExamples3()"> Continue the present course and hit the pedestrians (killing <?php echo $variable7["Dead"];?> pedestrians) </label><br>
             </div> 
