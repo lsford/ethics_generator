@@ -43,6 +43,12 @@ $_SESSION["variable6"]=$_POST["variable6"];//Random variable 6
     <br>
     <br>
 </div>
+<div>
+      <h3 id="title-cdss">Health Information Technology Survey</h3>
+      <p id="description">Please select whether you agree or disagree with the statements below. When you have made your decision, please click <b>Confirm Choice</b>. This will lock in your answer. Please press <b>Next Page</b> to move onto the next set of questions. </p> 
+    </div>
+    <div id="line">
+    </div>
   <h3 id="title-cdss">HIT Survey</h3>
 <div id="cdss-container">
 <form method="POST" action="#">

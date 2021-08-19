@@ -46,6 +46,10 @@ $_SESSION["T15"]=$_POST["T15"];//Trust 6 Variable
     <br>
     <br>
   </div>
+  <div>
+      <h3 id="title-cdss">Health Information Technology Survey</h3>
+      <p id="description">Please enter your demographic information. This information cannot be used to identify you, and your repsonse will be anonymous. Please click <b>Submit</b> to submit your results. </p> 
+    </div>
   <h3 id="title-cdss">HIT Survey</h3>
 <div id="cdss-container">
     <form method="POST" action="scenario_results.php">

@@ -44,7 +44,8 @@ $_SESSION["T9"]=$_POST["T9"];//Likert 9 Variable
     <br>
     <br>
   </div>
-  <h3 id="title-cdss">HIT Survey</h3>
+  <h3 id="title-cdss">Health Information Technology Survey</h3>
+  <p id="description">Please select the option you feel is the most appropriate based on the statements below. When you have made your decision, please click <b>Submit</b> to move onto the next set of questions. </p> 
   <div>
       <p id="description">The following questions are about assigning blame when wrong decisions are made. For all these scenarios, imagine an artificial intelligence purposefully designed by a manufacturer to diagnose illness, being used in a hospital in unison with a doctor. </p>
       <p id="description">The doctor: a GP with 14 years of experience</p>
@@ -55,6 +56,7 @@ $_SESSION["T9"]=$_POST["T9"];//Likert 9 Variable
     <div id="line">
     </div>
   <p></p>
+  <h3 id="title-cdss">HIT Survey</h3>
 <div id="cdss-container">
     <form method="POST" action="demographic.php">
     <div id="submit-scenarios">
