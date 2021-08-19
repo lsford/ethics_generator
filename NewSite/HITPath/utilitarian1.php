@@ -56,7 +56,7 @@ $variable2 = $stmt2->fetch();
 </head>
 <main>
 <h3 id="title-cdss">Health Information Technology Survey</h3>
-      <p id="description">Please select how strongly you agree or disagree with the statement below. When you have made your decision, please click <b>Confirm Choice</b>. This will lock in your answer. You will then be shown a scenario as well as the scenario outcomes, please select the outcome you find prefereable. When you have made your decision, please click <b>Confirm Choice</b>. Please press <b>Next Page</b> to move onto the next set of questions. </p> 
+      <p id="description">Please select how strongly you agree or disagree with the statement below. When you have made your decision, please click <b>Confirm Choice</b>. This will lock in your answer. You will then be shown a scenario as well as the scenario outcomes, please select the outcome you find preferable. When you have made your decision, please click <b>Confirm Choice</b>. Please press <b>Next Page</b> to move onto the next set of questions. </p> 
     </div>
     <div id="line">
     </div>
