@@ -1,12 +1,13 @@
 <?php session_start(); ?>
 <?php 
-$_SESSION["T10"]=$_POST["T10"];//Trust 1 Variable
-$_SESSION["T11"]=$_POST["T11"];//Trust 2 Variable
-$_SESSION["T12"]=$_POST["T12"];//Trust 3 Variable
-$_SESSION["T13"]=$_POST["T13"];//Trust 4 Variable
-$_SESSION["T14"]=$_POST["T14"];//Trust 5 Variable
-$_SESSION["T15"]=$_POST["T15"];//Trust 6 Variable
-
+$_SESSION["L7"]=$_POST["L7"];//L13 Variable
+$_SESSION["L8"]=$_POST["L8"];//L14 Variable
+$_SESSION["L9"]=$_POST["L9"];//L9 Variable
+$_SESSION["L10"]=$_POST["L10"];//L10 Variable
+$_SESSION["L11"]=$_POST["L11"];//L11 Variable
+$_SESSION["L12"]=$_POST["L12"];//L12 Variable
+$_SESSION["L13"]=$_POST["L13"];//L13 Variable
+$_SESSION["L14"]=$_POST["L14"];//L14 Variable
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@ $_SESSION["T15"]=$_POST["T15"];//Trust 6 Variable
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <script src="scenarios.js"></script>
+    <script src="carfunctions.js"></script>
     <body id="cdss-body">
         <header>
             <nav class="navigation-index">
@@ -33,7 +34,6 @@ $_SESSION["T15"]=$_POST["T15"];//Trust 6 Variable
               <div class="clear"></div>
             </nav>
           </header>
-
 </head>
 <main>
 <div>
@@ -47,10 +47,10 @@ $_SESSION["T15"]=$_POST["T15"];//Trust 6 Variable
     <br>
     <br>
   </div>
-  <h3 id="title-cdss">HIT Survey</h3>
+  <h3 id="title-cdss">Autonomous Car Survey</h3>
 <div id="cdss-container">
-    <form method="POST" action="scenario_results.php">
-    <div id="submit-scenarios">
+    <form method="POST" action="Carresults2.php">
+    <div id="submit-examples">
       <!--Age-->
       <div>
         <p class="survey-paragraph">Please select your age</p>
