@@ -68,7 +68,7 @@ $variable3 = $stmt3->fetch();
           </div>
         
             <div>
-              <p id="description">Here you will be presented with a series of examples about the use of autonomous vehicles. Each question will include a written description of a example, you will be asked what you feel is the right thing to do but also stress to consider what you would do if you were driving instead of the AI. Finally you will be asked a series of statements where you are invited to ask how far you agree with the statements.</p>
+              <p id="description">Here you will be presented with a series of examples about the use of autonomous vehicles. Each question will include a written description of a example, you will be asked what you feel is the right thing to do. Finally you will be asked a series of statements where you are invited to answer whether you agree with them.</p>
               <p id="description">There is an example below, once you confirm your choice more will be revealed about the scenario. For the first three scenarios there are three stages, followed by two single stage scenarios. Thank you for your support!</p> 
             </div>
             
