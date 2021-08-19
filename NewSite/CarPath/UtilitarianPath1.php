@@ -37,25 +37,25 @@ $variable3 = $stmt3->fetch();
 ?>
 <html lang="en">
 <head>
-    <title>About the Ethics Generator</title>
-    <link rel="icon" href="/2890562-artificialintelligence11_101977.ico" />
+    <title>Car Example 1</title>
+    <link rel="icon" href="../2890562-artificialintelligence11_101977.ico" />
     <meta name="viewport" content="width=device.width, initial-scale=1" />
-    <link rel="icon" href="/2890562-artificialintelligence11_101977.ico" />
+    <link rel="icon" href="../2890562-artificialintelligence11_101977.ico" />
     <link rel="stylesheet" href="style.css" />   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <script src="carfunctions.js"></script>
-    <body id="cdss-body">
+    <body id="car-body">
 
         <header>
             <nav class="navigation-index">
-               <a href="index.html"><h1 id="title">Ethics Explored</h1></a>
+               <a href="../index.html"><h1 id="title">Ethics Explored</h1></a>
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
-                <li><a href="index.html">Home</a></li>
-          <li><a href="scenarios.html">Scenarios</a></li>
-          <li><a href="about.html">About</a></li>
+                <li><a href="../index.html">Home</a></li>
+          <li><a href="../scenarios.html">Scenarios</a></li>
+          <li><a href="../about.html">About</a></li>
               </ul>
               <div class="clear"></div>
             </nav>
@@ -73,10 +73,10 @@ $variable3 = $stmt3->fetch();
             </div>
             
             <div id="line">
-              <h3 id="title-cdss">Example 1</h3>
+              <h3 id="title-car">Example 1</h3>
             </div>
                
-            <div id="cdss-container">
+            <div id="car-container">
               <form method="POST" action="UtilitarianPath2.php">
                 <!--example 1 stage 1-->
                 <p class="survey-paragraph">1.1) A full coach of passengers is driving down a quiet road when an unidentified van, with <?php echo $variable1["Dead"];?> passengers, drives quickly around the corner. The coach driver is then presented with two options. The first option is continuing onwards, but into the van, preserving all life on the coach killing all on board the van. The second option is swerve suddenly off the road into the verge which would threaten the life of everyone on board the coach but save those in the van. Should the coach driver:</p>

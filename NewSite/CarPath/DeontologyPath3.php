@@ -36,24 +36,24 @@ $variable9 = $stmt9->fetch();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About the Ethics Generator</title>
-    <link rel="icon" href="/2890562-artificialintelligence31_101977.ico" />
+    <title>Car Example 3</title>
+    <link rel="icon" href="../2890562-artificialintelligence31_101977.ico" />
     <meta name="viewport" content="width=device.width, initial-scale=1" />
-    <link rel="icon" href="2890562-artificialintelligence31_101977.ico" />
+    <link rel="icon" href="../2890562-artificialintelligence31_101977.ico" />
     <link rel="stylesheet" href="style.css" />   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="carfunctions.js"></script>
-    <body id="cdss-body">
+    <body id="car-body">
         <header>
             <nav class="navigation-index">
-               <a href="index.html"><h1 id="title">Ethics Explored</h1></a>
+               <a href="../index.html"><h1 id="title">Ethics Explored</h1></a>
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
-                <li><a href="index.html">Home</a></li>
-          <li><a href="scenarios.html">Scenarios</a></li>
-          <li><a href="about.html">About</a></li>
+                <li><a href="../index.html">Home</a></li>
+          <li><a href="../scenarios.html">Scenarios</a></li>
+          <li><a href="../about.html">About</a></li>
               </ul>
               <div class="clear"></div>
             </nav>
@@ -68,9 +68,9 @@ $variable9 = $stmt9->fetch();
     <br>
     <br>
   </div>
-  <h3 id="title-cdss">Example 3</h3>
+  <h3 id="title-car">Example 3</h3>
   <p id="description">These examples are slighlty different from what you have just completed, rather than 3 parts these three questions are single staged.</p>
-    <div id="cdss-container">
+    <div id="car-container">
         <form method="POST" action="DeontologyPath4.php">
           <!--Single Stage-->
           <div id="example13">
