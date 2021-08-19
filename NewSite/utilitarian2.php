@@ -51,8 +51,11 @@ $variable4 = $stmt2->fetch();
 
 </head>
 <main>
-  <div>
-  </div>
+<h3 id="title-cdss">Health Information Technology Survey</h3>
+      <p id="description">Please select how strongly you agree or disagree with the stament below. Once you have selected your preference for each statement, please click <b>Confirm Choice</b>. This will lock in your answer, and display the next senario. For each scenario, please select the outcome you find preferable and select <b>Confirm Choice</b>. Please press <b>Next Page</b> to move onto the next set of questions when you have finished.</p> 
+    </div>
+    <div id="line">
+    </div>
   <h3 id="title-cdss">HIT Survey</h3>
     <div id="cdss-container">
     <form method="POST" action="utilitarian3.php">
