@@ -56,16 +56,13 @@ $variable2 = $stmt2->fetch();
           </header>
 </head>
 <main>
-  <div>
-    <h3 id="purpose">Healthcare Information Technology</h3>
-  </div>
-
-    <div>
-      <p id="description">Here you will be presented with a series of questions regarding the use of autonomous artificial intelligence in healthcare. For some questions you will be shown a written description of a scenario, as well as the scenario outcomes. You are asked to select which of the two outcomes you prefer. The other questions ask you to rate how strongly you agree or disagree with a statement. </p>
-      <p id="description">The first scenario is below, once you have clicked on the outcome you find preferable, please click <b>Confirm Choice</b>. This will lock in your answer, and show you the next scenario. Please press <b>Next Page</b> when you have finished answering a set of scenarios to move onto the next set. No knowledge of the topic is required to answer the questions. Please answer honestly.</p> 
+<h3 id="title-cdss">Health Information Technology Survey</h3>
+      <p id="description">Please select how strongly you agree or disagree with the stament below. Once you have selected your preference for each statement, please click <b>Confirm Choice</b>. This will lock in your answer, and display the next senario. For each scenario, please select the outcome you find preferable and select <b>Confirm Choice</b>. Please press <b>Next Page</b> to move onto the next set of questions when you have finished.</p> 
+    </div>
+    <div id="line">
     </div>
     
-    <div id="line">
+    <div>
       <h3 id="title-cdss">HIT Survey</h3>
     </div>
        
