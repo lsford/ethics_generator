@@ -11,23 +11,23 @@ $_SESSION["variable13"]=$_POST["variable13"];// Variable
 <html lang="en">
 <head>
     <title>About the Ethics Generator</title>
-    <link rel="icon" href="/2890562-artificialintelligence11_101977.ico" />
+    <link rel="icon" href="../2890562-artificialintelligence11_101977.ico" />
     <meta name="viewport" content="width=device.width, initial-scale=1" />
-    <link rel="icon" href="2890562-artificialintelligence11_101977.ico" />
+    <link rel="icon" href="../2890562-artificialintelligence11_101977.ico" />
     <link rel="stylesheet" href="style.css" />   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="carfunctions.js"></script>
-    <body id="cdss-body">
+    <body id="car-body">
         <header>
             <nav class="navigation-index">
-               <a href="index.html"><h1 id="title">Ethics Explored</h1></a>
+               <a href="../index.html"><h1 id="title">Ethics Explored</h1></a>
               <!--<img src="Logo1.png" height="50" width="">-->
                <ul>
-                <li><a href="index.html">Home</a></li>
-          <li><a href="scenarios.html">Scenarios</a></li>
-          <li><a href="about.html">About</a></li>
+                <li><a href="../index.html">Home</a></li>
+          <li><a href="../scenarios.html">Scenarios</a></li>
+          <li><a href="../bout.html">About</a></li>
               </ul>
               <div class="clear"></div>
             </nav>
@@ -46,8 +46,8 @@ $_SESSION["variable13"]=$_POST["variable13"];// Variable
     <br>
     <br>
   </div>
-  <h3 id="title-cdss">Autonomous Car Survey</h3>
-<div id="cdss-container">
+  <h3 id="title-car">Autonomous Car Survey</h3>
+<div id="car-container">
     <form method="POST" action="cardemographics.php">
          
         <!--likert 1-->

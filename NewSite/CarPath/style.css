@@ -201,7 +201,7 @@ nav li {
   margin-top: 3rem;
 }
 
-#title-cdss {
+#title-car {
   font-size: 3rem;
   color: #f2eae7;
   text-align: center;
@@ -357,13 +357,13 @@ nav li {
   margin-left: 1rem;
 }
 
-/* CDSS Page*/
-#cdss-body {
+/* Car Page*/
+#car-body {
   background: #036f96;
   min-height: 65rem;
 }
 
-/*CDSS Text*/
+/*Car Text*/
 #description {
   font-size: 2rem;
   color: #f2eae7;
@@ -371,8 +371,8 @@ nav li {
   justify-content: center;
 }
 
-/* CDSS Container */
-#cdss-container {
+/* Car Container */
+#car-container {
   width: 70rem;
   height: max-content;
   border: 3px solid #fe5900;
